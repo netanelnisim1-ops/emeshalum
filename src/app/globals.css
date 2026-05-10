@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-assistant), "Assistant", "Heebo", system-ui, -apple-system, sans-serif;
+
+  --color-brand-navy: #16314a;
+  --color-brand-navy-deep: #0e1f2e;
+  --color-brand-navy-light: #2a4d6f;
+  --color-brand-orange: #e85d1f;
+  --color-brand-orange-deep: #c44a14;
+  --color-brand-orange-light: #f9854f;
+  --color-brand-cream: #fafaf7;
+  --color-brand-stone: #f1efeb;
+  --color-brand-graphite: #2c2c2c;
+  --color-brand-mist: #6b7280;
+  --color-brand-gold: #c9a961;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0e1f2e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "ss02";
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 18s ease-out both;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
 }
