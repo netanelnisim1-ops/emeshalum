@@ -9,7 +9,7 @@ export const BUSINESS = {
   phone: "+972559922592",
   phoneDisplay: "055-992-2592",
   whatsapp: "972559922592",
-  email: "jobs@aloni-alum.co.il",
+  email: "allonioffice@gmail.com",
   instagram: "https://www.instagram.com/aluminium_emesh/",
   siteUrl: "https://emeshalum.vercel.app",
   serviceArea: "כל הארץ",

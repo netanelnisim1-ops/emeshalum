@@ -1,6 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Assistant } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#16314a",
+  colorScheme: "light",
+};
 
 const assistant = Assistant({
   variable: "--font-assistant",
@@ -13,7 +21,7 @@ const SITE_URL = "https://emeshalum.vercel.app";
 const BUSINESS_NAME = "א.מ.ש אלומיניום";
 const BUSINESS_PHONE = "+972559922592";
 const BUSINESS_PHONE_DISPLAY = "055-992-2592";
-const BUSINESS_EMAIL = "jobs@aloni-alum.co.il";
+const BUSINESS_EMAIL = "allonioffice@gmail.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
