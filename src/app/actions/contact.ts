@@ -8,7 +8,7 @@ export type ContactFormState = {
   message: string;
 };
 
-const TARGET_EMAIL = BUSINESS.email;
+const TARGET_EMAIL = process.env.LEAD_TARGET_EMAIL || "allonioffice@gmail.com";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
 export async function submitContactForm(
