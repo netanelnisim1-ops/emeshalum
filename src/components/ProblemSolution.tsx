@@ -19,13 +19,13 @@ const ADVANTAGES = [
   {
     icon: ShieldCheck,
     title: "כתובת אחת לאחריות",
-    body: "5 שנות אחריות מקיפה. יש בעיה? טלפון אחד אלינו, ואנחנו מטפלים בהכל.",
+    body: "10 שנות אחריות מקיפה. יש בעיה? טלפון אחד אלינו, ואנחנו מטפלים בהכל.",
   },
 ];
 
 export default function ProblemSolution() {
   return (
-    <section className="py-20 md:py-28 bg-brand-cream">
+    <section className="py-14 md:py-20 bg-brand-cream">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-14">
           <p className="text-brand-orange font-bold text-sm md:text-base uppercase tracking-widest mb-3">

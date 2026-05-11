@@ -21,7 +21,7 @@ const SEGMENTS = [
 
 export default function AudienceSegments() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-14 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-14">
           <p className="text-brand-orange font-bold text-sm md:text-base uppercase tracking-widest mb-3">

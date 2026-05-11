@@ -5,7 +5,7 @@ export const BUSINESS = {
   founderName: "נתנאל ניסים",
   founderRole: 'מנכ"ל ובעלים',
   yearsExperience: 20,
-  warrantyYears: 5,
+  warrantyYears: 10,
   phone: "+972559922592",
   phoneDisplay: "055-992-2592",
   whatsapp: "972559922592",

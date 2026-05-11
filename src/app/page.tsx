@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import AudienceSegments from "@/components/AudienceSegments";
 import ServicesPreview from "@/components/ServicesPreview";
+import KlilProfiles from "@/components/KlilProfiles";
 import Authority from "@/components/Authority";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function HomePage() {
         <ProblemSolution />
         <AudienceSegments />
         <ServicesPreview />
+        <KlilProfiles />
         <Authority />
         <ContactSection />
       </main>

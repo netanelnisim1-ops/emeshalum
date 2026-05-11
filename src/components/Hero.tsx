@@ -4,7 +4,7 @@ import { BUSINESS } from "@/lib/business";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-[92vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center animate-slow-zoom"
@@ -18,7 +18,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(115deg, rgba(14,31,46,0.92) 0%, rgba(22,49,74,0.78) 45%, rgba(22,49,74,0.35) 100%)",
+              "linear-gradient(115deg, rgba(8,18,30,0.96) 0%, rgba(14,31,46,0.92) 45%, rgba(14,31,46,0.78) 100%)",
           }}
           aria-hidden
         />
@@ -26,33 +26,34 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-28 w-full">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-brand-orange/15 border border-brand-orange/40 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 animate-fade-up">
-            <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-            <span className="text-brand-orange-light font-semibold text-sm">
+          <div
+            className="inline-flex items-center gap-3 bg-brand-orange/20 border-2 border-brand-orange/60 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-up shadow-lg shadow-brand-orange/20"
+          >
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-orange animate-pulse" />
+            <span className="text-brand-orange-light font-bold text-base md:text-lg tracking-wide">
               יצרן בלעדי | {BUSINESS.yearsExperience}+ שנות ניסיון
             </span>
           </div>
 
           <h1
-            className="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-balance animate-fade-up"
+            className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-tight text-balance animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            הבית שלכם עומד לקבל את חלונות
+            חלון לחיים.
             <br />
-            <span className="text-brand-orange-light">האלומיניום המושלמים.</span>
+            <span className="text-brand-orange-light">חיבור מושלם</span>
             <br />
-            <span className="text-white/85 text-3xl md:text-5xl lg:text-6xl font-bold">
-              בלי כאב הראש של השיפוץ.
-            </span>
+            <span className="text-white/90">בין הבית לעולם.</span>
           </h1>
 
           <p
-            className="text-white/85 text-lg md:text-xl mt-7 leading-relaxed max-w-2xl text-pretty animate-fade-up"
+            className="text-white/90 text-lg md:text-xl mt-7 leading-relaxed max-w-2xl text-pretty animate-fade-up"
             style={{ animationDelay: "0.25s" }}
           >
-            כשהפרופיל, הזכוכית, הצבע והפרזול מיוצרים כולם במפעל אחד – אתם מקבלים
-            חלונות ברמת הגימור הגבוהה ביותר, באספקה מהירה ובמחיר יצרן. בלי
-            לרדוף אחרי ספקים, ובלי שקבלנים יזרקו אחריות אחד על השני.
+            חלון אלומיניום איכותי מבודד מהקור והחום, חוסם רעש, מאיר את הבית
+            בשמש, ושומר על האווירה שאתם רוצים. בא.מ.ש אלומיניום אנחנו מייצרים
+            את כל חלקי החלון – פרופיל, זכוכית, צבע ופרזול – בעצמנו. תוצאה:
+            התאמה מדויקת, מחיר ישיר מהיצרן, ואחריות אחת מקיפה.
           </p>
 
           <div
@@ -67,30 +68,27 @@ export default function Hero() {
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             </Link>
 
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              className="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold px-8 py-4 rounded-xl text-base md:text-lg transition-all"
-            >
+            <div className="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold px-8 py-4 rounded-xl text-base md:text-lg select-text">
               <Phone className="w-5 h-5" strokeWidth={2.5} />
               <span dir="ltr">{BUSINESS.phoneDisplay}</span>
-            </a>
+            </div>
           </div>
 
           <div
-            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-white/75 text-sm animate-fade-up"
+            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 animate-fade-up"
             style={{ animationDelay: "0.55s" }}
           >
-            <div className="flex items-center gap-2">
-              <span className="text-brand-orange text-lg">✓</span>
-              <span>הכל תחת קורת גג אחת</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/15">
+              <span className="flex items-center justify-center w-7 h-7 bg-brand-orange rounded-full text-white text-base font-extrabold shrink-0">✓</span>
+              <span className="text-white font-bold text-base md:text-lg">הכל תחת קורת גג אחת</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-brand-orange text-lg">✓</span>
-              <span>מחירי יצרן הוגנים</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/15">
+              <span className="flex items-center justify-center w-7 h-7 bg-brand-orange rounded-full text-white text-base font-extrabold shrink-0">✓</span>
+              <span className="text-white font-bold text-base md:text-lg">מחירי יצרן הוגנים</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-brand-orange text-lg">✓</span>
-              <span>{BUSINESS.warrantyYears} שנות אחריות</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/15">
+              <span className="flex items-center justify-center w-7 h-7 bg-brand-orange rounded-full text-white text-base font-extrabold shrink-0">✓</span>
+              <span className="text-white font-bold text-base md:text-lg">{BUSINESS.warrantyYears} שנות אחריות</span>
             </div>
           </div>
         </div>

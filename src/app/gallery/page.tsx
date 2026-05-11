@@ -35,49 +35,49 @@ export const metadata: Metadata = {
 
 const PROJECTS = [
   {
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80",
-    title: "ויטרינה פנורמית בוילה פרטית",
+    image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=1400&q=80",
+    title: "חלון פנורמי עם נוף לים",
     category: "חלונות פנורמיים",
   },
   {
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
-    title: "חלונות בלגיים בסלון מודרני",
-    category: "חלונות בלגיים",
+    title: "חלונות מינימל זיגוג כפול",
+    category: "חלונות מינימל",
   },
   {
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1400&q=80",
     title: "פרגולת אלומיניום צמודת בית",
-    category: "פרגולות",
+    category: "פרגולות אלומיניום",
   },
   {
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=80",
-    title: "סגירת חורף למרפסת זכוכית",
-    category: "סגירות מרפסת",
+    title: "מעקות זכוכית וחלונות בייסיק",
+    category: "מעקות זכוכית",
   },
   {
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80",
-    title: "מקלחון פינתי עם זכוכית מחוסמת",
+    image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1400&q=80",
+    title: "מקלחון עם זכוכית מחוסמת",
     category: "מקלחונים",
   },
   {
-    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1400&q=80",
-    title: "תריס אור חשמלי בחדר שינה",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1400&q=80",
+    title: "תריס חשמלי בווילה יוקרתית",
     category: "תריסים חשמליים",
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80",
-    title: "מעקה אלומיניום עם זכוכית",
-    category: "מעקות",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80",
+    title: "חיפוי אלומיניום קירות מסך",
+    category: "חיפויי אלומיניום",
   },
   {
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1545193544-312983719627?auto=format&fit=crop&w=1400&q=80",
     title: "דלת אלומיניום כניסה מעוצבת",
-    category: "דלתות",
+    category: "דלתות כניסה",
   },
   {
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80",
-    title: "חלונות הזזה ענקיים לסלון",
-    category: "חלונות הזזה",
+    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1400&q=80",
+    title: "ויטרינה בלגית יוקרתית",
+    category: "ויטרינות בלגיות",
   },
 ];
 

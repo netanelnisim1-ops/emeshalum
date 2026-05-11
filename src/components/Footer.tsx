@@ -45,6 +45,7 @@ export default function Footer() {
               <span className="text-sm font-semibold">
                 {BUSINESS.warrantyYears} שנות אחריות מקיפה
               </span>
+              {/* business.warrantyYears is the single source of truth (now 10) */}
             </div>
           </div>
 
@@ -83,16 +84,11 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">צור קשר</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href={`tel:${BUSINESS.phone}`}
-                  className="flex items-center gap-3 text-white/80 hover:text-brand-orange-light transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-brand-orange shrink-0" />
-                  <span dir="ltr" className="font-semibold">
-                    {BUSINESS.phoneDisplay}
-                  </span>
-                </a>
+              <li className="flex items-center gap-3 text-white/80">
+                <Phone className="w-4 h-4 text-brand-orange shrink-0" />
+                <span dir="ltr" className="font-semibold select-text">
+                  {BUSINESS.phoneDisplay}
+                </span>
               </li>
               <li>
                 <a

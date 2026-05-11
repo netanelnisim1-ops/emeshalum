@@ -8,9 +8,12 @@ const STATS = [
   { number: "100%", label: "ייצור In-House" },
 ];
 
+const NETANEL_PHOTO =
+  "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+
 export default function Authority() {
   return (
-    <section className="relative py-20 md:py-28 bg-brand-navy-deep text-white overflow-hidden">
+    <section className="relative py-14 md:py-20 bg-brand-navy-deep text-white overflow-hidden">
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -21,7 +24,7 @@ export default function Authority() {
       />
 
       <div className="relative max-w-6xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
           <p className="text-brand-orange-light font-bold text-sm md:text-base uppercase tracking-widest mb-3">
             סמכות וניסיון
           </p>
@@ -34,7 +37,7 @@ export default function Authority() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-14">
           {STATS.map((stat) => (
             <div
               key={stat.label}
@@ -50,30 +53,42 @@ export default function Authority() {
           ))}
         </div>
 
-        <figure className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 relative">
+        <figure className="max-w-5xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-7 md:p-10 relative">
           <Quote
             className="absolute top-6 right-6 w-12 h-12 text-brand-orange/30 rotate-180"
             aria-hidden
           />
 
-          <blockquote className="text-lg md:text-2xl leading-relaxed text-white/95 mb-6 text-pretty">
-            "כקבלן אלומיניום עם מעל 15 שנות ניסיון בשטח, ראיתי את כל התקלות
-            שיכולות לקרות בבנייה. לכן הקמתי את המפעל שלנו בצורה שתעניק ללקוח
-            שקט נפשי אמיתי. כל חלון, מסילה וזכוכית שיוצאים מאיתנו עוברים בקרת
-            איכות קפדנית, עד להתקנה המושלמת אצלכם בבית."
-          </blockquote>
-
-          <figcaption className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand-orange to-brand-orange-deep flex items-center justify-center text-2xl font-extrabold">
-              {BUSINESS.founderName.charAt(0)}
-            </div>
-            <div>
-              <div className="font-bold text-lg">{BUSINESS.founderName}</div>
-              <div className="text-brand-orange-light text-sm font-semibold">
-                {BUSINESS.founderRole} | {BUSINESS.name}
+          <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-10 items-center">
+            <div className="relative w-full max-w-[200px] aspect-square mx-auto md:mx-0">
+              <div
+                className="absolute inset-0 rounded-2xl bg-cover bg-center border-4 border-brand-orange/50 shadow-2xl shadow-brand-orange/20"
+                style={{ backgroundImage: `url('${NETANEL_PHOTO}')` }}
+                role="img"
+                aria-label={`תמונת ${BUSINESS.founderName}`}
+              />
+              <div className="absolute -bottom-3 -left-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                {BUSINESS.yearsExperience}+ שנות ניסיון
               </div>
             </div>
-          </figcaption>
+
+            <div>
+              <blockquote className="text-base md:text-xl leading-relaxed text-white/95 mb-5 text-pretty">
+                "כקבלן אלומיניום עם מעל 15 שנות ניסיון בשטח, ראיתי את כל
+                התקלות שיכולות לקרות בבנייה. לכן הקמתי את המפעל שלנו בצורה
+                שתעניק ללקוח שקט נפשי אמיתי. כל חלון, מסילה וזכוכית שיוצאים
+                מאיתנו עוברים בקרת איכות קפדנית, עד להתקנה המושלמת אצלכם
+                בבית."
+              </blockquote>
+
+              <figcaption>
+                <div className="font-bold text-lg">{BUSINESS.founderName}</div>
+                <div className="text-brand-orange-light text-sm font-semibold">
+                  {BUSINESS.founderRole} | {BUSINESS.name}
+                </div>
+              </figcaption>
+            </div>
+          </div>
         </figure>
       </div>
     </section>

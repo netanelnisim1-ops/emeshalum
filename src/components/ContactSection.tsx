@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 import ContactForm from "./ContactForm";
 
@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-20 md:py-28 bg-brand-navy-deep text-white overflow-hidden"
+      className="relative py-14 md:py-20 bg-brand-navy-deep text-white overflow-hidden"
     >
       <div
         className="absolute inset-0 opacity-15"
@@ -40,28 +40,25 @@ export default function ContactSection() {
             </h2>
             <p className="text-white/85 text-lg leading-relaxed text-pretty mb-10">
               אל תסגרו את עבודות האלומיניום שלכם לפני שדיברתם איתנו. השאירו
-              פרטים, והצוות המקצועי שלנו (ולא נציג מכירות חיצוני) יחזור אליכם עם
-              ייעוץ ראשוני ללא התחייבות.
+              פרטים, והצוות המקצועי שלנו (ולא נציג מכירות חיצוני) יחזור אליכם
+              עם ייעוץ ראשוני ללא התחייבות.
             </p>
 
             <div className="space-y-4">
-              <a
-                href={`tel:${BUSINESS.phone}`}
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center group-hover:bg-brand-orange transition-colors">
-                  <Phone className="w-5 h-5 text-brand-orange-light group-hover:text-white" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-brand-orange-light" />
                 </div>
                 <div>
-                  <div className="text-white/60 text-sm">חייגו עכשיו</div>
+                  <div className="text-white/60 text-sm">טלפון</div>
                   <div
                     dir="ltr"
-                    className="text-xl font-bold group-hover:text-brand-orange-light transition-colors"
+                    className="text-xl font-bold select-text"
                   >
                     {BUSINESS.phoneDisplay}
                   </div>
                 </div>
-              </a>
+              </div>
 
               <a
                 href={`mailto:${BUSINESS.email}`}
@@ -100,8 +97,22 @@ export default function ContactSection() {
                 <div>
                   <div className="text-white/60 text-sm">זמן תגובה</div>
                   <div className="text-base md:text-lg font-bold">
-                    בתוך 24 שעות בימי עבודה
+                    נחזור אליכם עד 24 שעות
                   </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center shrink-0">
+                  <Calendar className="w-5 h-5 text-brand-orange-light" />
+                </div>
+                <div>
+                  <div className="text-white/60 text-sm">שעות פעילות שירות לקוחות</div>
+                  <ul className="text-base md:text-lg font-bold space-y-1 mt-1">
+                    <li>א'-ה': 9:00-17:00</li>
+                    <li>יום ו': 9:00-12:00</li>
+                    <li>שבת: סגור</li>
+                  </ul>
                 </div>
               </div>
             </div>

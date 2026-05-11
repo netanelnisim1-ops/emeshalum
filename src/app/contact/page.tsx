@@ -36,24 +36,21 @@ export default function ContactPage() {
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-3 gap-6 mb-14">
-              <a
-                href={`tel:${BUSINESS.phone}`}
-                className="group bg-brand-navy-deep text-white rounded-2xl p-7 hover:bg-brand-navy transition-colors"
-              >
+              <div className="group bg-brand-navy-deep text-white rounded-2xl p-7">
                 <div className="w-12 h-12 rounded-xl bg-brand-orange flex items-center justify-center mb-4">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white/60 text-sm mb-1">חייגו עכשיו</p>
+                <p className="text-white/60 text-sm mb-1">טלפון</p>
                 <p
                   dir="ltr"
-                  className="text-2xl font-bold group-hover:text-brand-orange-light transition-colors"
+                  className="text-2xl font-bold select-text"
                 >
                   {BUSINESS.phoneDisplay}
                 </p>
                 <p className="text-white/60 text-sm mt-2">
-                  ימים א'-ה' 8:00-18:00
+                  ימים א'-ה' 9:00-17:00
                 </p>
-              </a>
+              </div>
 
               <a
                 href={whatsappUrl}
@@ -67,7 +64,7 @@ export default function ContactPage() {
                 <p className="text-white/70 text-sm mb-1">וואטסאפ</p>
                 <p className="text-2xl font-bold">שלחו הודעה</p>
                 <p className="text-white/70 text-sm mt-2">
-                  תגובה מהירה, 7 ימים בשבוע
+                  מענה עד סוף יום העסקים
                 </p>
               </a>
 
@@ -123,12 +120,16 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-bold text-brand-navy-deep">
-                        זמני מענה
+                        שעות פעילות שירות לקוחות
                       </p>
-                      <p className="text-brand-mist">
-                        ימים א'-ה' 8:00-18:00, יום ו' 8:00-13:00. תגובה לפניה
-                        בתוך 24 שעות.
-                      </p>
+                      <ul className="text-brand-mist space-y-1">
+                        <li>ימים א'-ה': 9:00-17:00</li>
+                        <li>יום ו': 9:00-12:00</li>
+                        <li>שבת: סגור</li>
+                        <li className="pt-2 font-semibold text-brand-navy">
+                          נחזור אליכם עד 24 שעות בימי עבודה
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
