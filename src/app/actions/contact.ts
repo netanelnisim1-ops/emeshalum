@@ -48,13 +48,20 @@ export async function submitContactForm(
 
   try {
     const resend = new Resend(apiKey);
-    await resend.emails.send({
-      from: `א.מ.ש אלומיניום אתר <${FROM_EMAIL}>`,
+    const { error } = await resend.emails.send({
+      from: FROM_EMAIL,
       to: [TARGET_EMAIL],
-      replyTo: undefined,
       subject: `🔔 ליד חדש מהאתר – ${name}${city ? ` (${city})` : ""}`,
       html: buildEmailHtml({ name, phone, city, message }),
     });
+
+    if (error) {
+      console.error("[contact] Resend returned error", error);
+      return {
+        status: "error",
+        message: "אירעה תקלה. אנא חייגו ישירות 055-992-2592",
+      };
+    }
 
     return {
       status: "success",
