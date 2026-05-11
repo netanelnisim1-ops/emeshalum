@@ -19,6 +19,7 @@ export const NAV_LINKS = [
   { href: "/", label: "בית" },
   { href: "/services", label: "שירותים" },
   { href: "/gallery", label: "גלריה" },
+  { href: "/blog", label: "בלוג" },
   { href: "/about", label: "אודות" },
   { href: "/contact", label: "צור קשר" },
 ] as const;
