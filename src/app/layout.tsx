@@ -87,6 +87,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  verification: {
+    google: "OQqiMDfQmZZBZ2O-35MbcOhMU2KxVQEDGOQDDhAebY0",
+  },
 };
 
 const localBusinessJsonLd = {
