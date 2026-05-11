@@ -18,7 +18,15 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(115deg, rgba(8,18,30,0.96) 0%, rgba(14,31,46,0.92) 45%, rgba(14,31,46,0.78) 100%)",
+              "linear-gradient(245deg, rgba(8,18,30,0.78) 0%, rgba(14,31,46,0.55) 45%, rgba(14,31,46,0.25) 100%)",
+          }}
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%)",
           }}
           aria-hidden
         />
@@ -37,7 +45,10 @@ export default function Hero() {
 
           <h1
             className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-tight text-balance animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
+            style={{
+              animationDelay: "0.1s",
+              textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4)",
+            }}
           >
             חלון לחיים.
             <br />
@@ -47,8 +58,11 @@ export default function Hero() {
           </h1>
 
           <p
-            className="text-white/90 text-lg md:text-xl mt-7 leading-relaxed max-w-2xl text-pretty animate-fade-up"
-            style={{ animationDelay: "0.25s" }}
+            className="text-white text-lg md:text-xl mt-7 leading-relaxed max-w-2xl text-pretty animate-fade-up"
+            style={{
+              animationDelay: "0.25s",
+              textShadow: "0 1px 8px rgba(0,0,0,0.6)",
+            }}
           >
             חלון אלומיניום איכותי מבודד מהקור והחום, חוסם רעש, מאיר את הבית
             בשמש, ושומר על האווירה שאתם רוצים. בא.מ.ש אלומיניום אנחנו מייצרים

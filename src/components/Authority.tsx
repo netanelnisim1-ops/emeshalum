@@ -8,8 +8,7 @@ const STATS = [
   { number: "100%", label: "ייצור In-House" },
 ];
 
-const NETANEL_PHOTO =
-  "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+const NETANEL_PHOTO = "/images/netanel-owner.jpeg";
 
 export default function Authority() {
   return (
