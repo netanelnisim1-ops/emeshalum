@@ -11,7 +11,7 @@ export const BUSINESS = {
   whatsapp: "972559922592",
   email: "allonioffice@gmail.com",
   instagram: "https://www.instagram.com/aluminium_emesh/",
-  siteUrl: "https://emeshalum.vercel.app",
+  siteUrl: "https://emeshalum.co.il",
   serviceArea: "כל הארץ",
 } as const;
 

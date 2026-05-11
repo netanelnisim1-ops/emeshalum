@@ -17,7 +17,7 @@ const assistant = Assistant({
   display: "swap",
 });
 
-const SITE_URL = "https://emeshalum.vercel.app";
+const SITE_URL = "https://emeshalum.co.il";
 const BUSINESS_NAME = "א.מ.ש אלומיניום";
 const BUSINESS_PHONE = "+972559922592";
 const BUSINESS_PHONE_DISPLAY = "055-992-2592";
