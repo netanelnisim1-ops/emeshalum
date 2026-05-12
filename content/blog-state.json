@@ -1,6 +1,7 @@
 {
   "usedKeywords": [
-    "איך לבחור חלון אלומיניום"
+    "איך לבחור חלון אלומיניום",
+    "אלומיניום הרצליה"
   ],
   "history": [
     {
@@ -8,6 +9,12 @@
       "slug": "ayk-lbchvr-chlvn-alvmynyvm",
       "category": "guides",
       "publishedAt": "2026-05-11T16:30:00.000Z"
+    },
+    {
+      "keyword": "אלומיניום הרצליה",
+      "slug": "alvmynyvm-hrtslyh",
+      "category": "local",
+      "publishedAt": "2026-05-12T10:42:14.694Z"
     }
   ]
 }
