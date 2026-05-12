@@ -1,11 +1,10 @@
 name: Daily Blog Article
 
-# Runs daily at 04:00 UTC = 06:00/07:00 Israel time
-# Also can be triggered manually from the Actions tab
+# Triggered daily via Vercel Cron (workflow_dispatch from /api/cron/daily-article)
+# Vercel cron is more reliable than GitHub Actions schedule.
+# Can also be triggered manually from the Actions tab.
 
 on:
-  schedule:
-    - cron: "0 4 * * *"
   workflow_dispatch:
     inputs:
       keyword:
