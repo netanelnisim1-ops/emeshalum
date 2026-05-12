@@ -58,11 +58,14 @@ export default function Authority() {
             aria-hidden
           />
 
-          <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-10 items-center">
-            <div className="relative w-full max-w-[200px] aspect-square mx-auto md:mx-0">
+          <div className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-center">
+            <div className="relative w-full max-w-[220px] aspect-[3/4] mx-auto md:mx-0">
               <div
-                className="absolute inset-0 rounded-2xl bg-cover bg-center border-4 border-brand-orange/50 shadow-2xl shadow-brand-orange/20"
-                style={{ backgroundImage: `url('${NETANEL_PHOTO}')` }}
+                className="absolute inset-0 rounded-2xl bg-cover border-4 border-brand-orange/50 shadow-2xl shadow-brand-orange/20"
+                style={{
+                  backgroundImage: `url('${NETANEL_PHOTO}')`,
+                  backgroundPosition: "center 20%",
+                }}
                 role="img"
                 aria-label={`תמונת ${BUSINESS.founderName}`}
               />
