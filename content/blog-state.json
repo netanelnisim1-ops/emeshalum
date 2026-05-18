@@ -6,7 +6,8 @@
     "כמה עולה חלון אלומיניום",
     "איך לבחור חלון בלגי",
     "איך לבחור פרגולת אלומיניום",
-    "מחיר חלון בלגי"
+    "מחיר חלון בלגי",
+    "חלון אלומיניום או PVC – מה עדיף"
   ],
   "history": [
     {
@@ -50,6 +51,12 @@
       "slug": "mchyr-chlvn-blgy",
       "category": "pricing",
       "publishedAt": "2026-05-17T05:13:55.831Z"
+    },
+    {
+      "keyword": "חלון אלומיניום או PVC – מה עדיף",
+      "slug": "chlvn-alvmynyvm-av-pvc-mh-adyf",
+      "category": "comparisons",
+      "publishedAt": "2026-05-18T04:51:46.371Z"
     }
   ]
 }
