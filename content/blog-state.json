@@ -7,7 +7,8 @@
     "איך לבחור חלון בלגי",
     "איך לבחור פרגולת אלומיניום",
     "מחיר חלון בלגי",
-    "חלון אלומיניום או PVC – מה עדיף"
+    "חלון אלומיניום או PVC – מה עדיף",
+    "תריס חשמלי לא יורד מה לעשות"
   ],
   "history": [
     {
@@ -57,6 +58,12 @@
       "slug": "chlvn-alvmynyvm-av-pvc-mh-adyf",
       "category": "comparisons",
       "publishedAt": "2026-05-18T04:51:46.371Z"
+    },
+    {
+      "keyword": "תריס חשמלי לא יורד מה לעשות",
+      "slug": "trys-chshmly-la-yvrd-mh-lashvt",
+      "category": "problems",
+      "publishedAt": "2026-05-19T05:11:58.793Z"
     }
   ]
 }
