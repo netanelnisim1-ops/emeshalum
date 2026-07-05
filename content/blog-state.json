@@ -53,7 +53,8 @@
     "מחיר חלון פנורמי",
     "מהו חלון קיפ דריי-קיפ",
     "מהן זכוכיות לאמינציה",
-    "מחיר חלון הזזה אלומיניום"
+    "מחיר חלון הזזה אלומיניום",
+    "חלון הזזה או חלון קיפ – מה לבחור"
   ],
   "history": [
     {
@@ -379,6 +380,12 @@
       "slug": "mchyr-chlvn-hzzh-alvmynyvm",
       "category": "pricing",
       "publishedAt": "2026-07-04T04:55:43.473Z"
+    },
+    {
+      "keyword": "חלון הזזה או חלון קיפ – מה לבחור",
+      "slug": "chlvn-hzzh-av-chlvn-kyp-mh-lbchvr",
+      "category": "comparisons",
+      "publishedAt": "2026-07-05T04:38:00.058Z"
     }
   ]
 }
