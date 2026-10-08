@@ -62,6 +62,14 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/areas"
+                  className="text-white/70 hover:text-brand-orange-light transition-colors"
+                >
+                  אזורי שירות
+                </Link>
+              </li>
             </ul>
           </div>
 

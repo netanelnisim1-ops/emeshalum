@@ -84,12 +84,31 @@ export default async function BlogPostPage({ params }: PageProps) {
     keywords: post.keyword,
   };
 
+  const faqs = extractFaqs(post.content);
+  const faqJsonLd = faqs.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <Header />
       <main className="flex-1">
         <PageHero
@@ -180,4 +199,28 @@ export default async function BlogPostPage({ params }: PageProps) {
       <StickyMobileCTA />
     </>
   );
+}
+
+// Pulls question + answer pairs out of the article's FAQ section.
+// Questions sit one heading level below the "שאלות נפוצות" heading.
+function extractFaqs(markdown: string) {
+  const match = markdown.match(/^(#{2,3}) שאלות נפוצות.*$/m);
+  if (!match || match.index === undefined) return [];
+  const level = match[1].length;
+  const rest = markdown.slice(match.index + match[0].length);
+  const body = rest.split(new RegExp(`^#{2,${level}} `, "m"))[0];
+  return body
+    .split(new RegExp(`^#{${level + 1}} `, "m"))
+    .slice(1)
+    .map((block) => {
+      const [question, ...rest] = block.split("\n");
+      const answer = rest
+        .join(" ")
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+        .replace(/[*_`]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+      return { question: question.replace(/[*_`]/g, "").trim(), answer };
+    })
+    .filter((f) => f.question && f.answer);
 }
