@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "description": "Queue for the twice-weekly article bot. Every topic is a keyword cluster from the Google autocomplete research (content/seo/keyword-research-2026-10.json) that no existing article covers. The bot takes the first unused topic, skips anything that overlaps an existing article, and stops when the queue is empty.",
+    "lastUpdated": "2026-10-09",
+    "rules": "No repair/technician topics (Netanel does not do shutter repairs). Add new topics at the end."
+  },
+  "topics": [
+    {
+      "keyword": "דלתות כניסה מאלומיניום לבניין",
+      "secondary": ["דלת אלומיניום כניסה לבניין", "דלתות אלומיניום לכניסה לבניין", "עבודות אלומיניום לבניין"],
+      "category": "use-cases",
+      "categoryIntent": "קונה מסחרי: ועד בית, קבלן או יזם שמחפש דלת כניסה ללובי",
+      "primaryService": "windows-doors",
+      "product": "doors",
+      "wordCount": 1600
+    },
+    {
+      "keyword": "איך בוחרים קבלן אלומיניום",
+      "secondary": ["קבלן אלומיניום מומלץ", "חוזה עבודות אלומיניום", "אחריות קבלן אלומיניום", "הסכם עבודות אלומיניום"],
+      "category": "guides",
+      "categoryIntent": "בעל בית לפני חתימה על עבודה, משווה בין ספקים",
+      "primaryService": "windows-doors",
+      "product": "general",
+      "wordCount": 1800
+    },
+    {
+      "keyword": "היתר לסגירת מרפסת",
+      "secondary": ["סגירת מרפסת היתר בניה", "סגירת מרפסת חוקית", "סגירת מרפסת ללא היתר", "סגירת מרפסת בבניין משותף"],
+      "category": "guides",
+      "categoryIntent": "בעל דירה שרוצה לסגור מרפסת ובודק מה מותר לפי החוק",
+      "primaryService": "windows-doors",
+      "product": "balcony",
+      "wordCount": 1600
+    },
+    {
+      "keyword": "פרגולת אלומיניום עם סנטף",
+      "secondary": ["פרגולות אלומיניום עם סנטף", "פרגולת אלומיניום סנטף", "סגירת מרפסת פוליקרבונט"],
+      "category": "comparisons",
+      "categoryIntent": "בוחר גג לפרגולה ומשווה סנטף מול חלופות",
+      "primaryService": "showers-pergolas-railings",
+      "product": "pergolas",
+      "wordCount": 1500
+    },
+    {
+      "keyword": "מעקה אלומיניום למדרגות",
+      "secondary": ["מעקה מדרגות אלומיניום", "מעקה אלומיניום למדרגות חוץ", "מעקה אלומיניום למדרגות פנים", "מעקה אלומיניום למדרגות מחיר"],
+      "category": "use-cases",
+      "categoryIntent": "בעל בית פרטי שמחפש מעקה למדרגות פנים או חוץ",
+      "primaryService": "showers-pergolas-railings",
+      "product": "railings",
+      "wordCount": 1500
+    },
+    {
+      "keyword": "דלת אלומיניום למרפסת",
+      "secondary": ["דלת אלומיניום הזזה", "דלתות מרפסת אלומיניום", "דלת יציאה אלומיניום", "דלת הזזה אלומיניום מחיר"],
+      "category": "use-cases",
+      "categoryIntent": "בוחר דלת יציאה למרפסת או לחצר",
+      "primaryService": "windows-doors",
+      "product": "doors",
+      "wordCount": 1600
+    },
+    {
+      "keyword": "גדר אלומיניום לבריכה",
+      "secondary": ["גדר אלומיניום מסביב לבריכה", "מעקה אלומיניום לבריכה"],
+      "category": "use-cases",
+      "categoryIntent": "בעל בית עם בריכה שצריך גידור בטיחותי",
+      "primaryService": "showers-pergolas-railings",
+      "product": "fences",
+      "wordCount": 1400
+    },
+    {
+      "keyword": "חלונות אלומיניום עם נתק תרמי",
+      "secondary": ["אלומיניום תרמי", "אלומיניום נתק תרמי", "חלונות אלומיניום נתק תרמי"],
+      "category": "guides",
+      "categoryIntent": "מי שבונה או משפץ ורוצה בידוד טוב יותר בחלונות",
+      "primaryService": "windows-doors",
+      "product": "windows",
+      "wordCount": 1500
+    },
+    {
+      "keyword": "סוגי זכוכית למקלחון",
+      "secondary": ["מקלחון זכוכית", "מקלחון זכוכית חלבית", "מקלחון זכוכית פסים", "מקלחון זכוכית גרניט"],
+      "category": "guides",
+      "categoryIntent": "בוחר מקלחון ומתלבט באיזו זכוכית",
+      "primaryService": "showers-pergolas-railings",
+      "product": "showers",
+      "wordCount": 1400
+    },
+    {
+      "keyword": "פרגולת אלומיניום לסוכה",
+      "secondary": ["פרגולות אלומיניום לסוכה", "פרגולת אלומיניום כשרה לסוכה", "פרגולת אלומיניום סוכה"],
+      "category": "use-cases",
+      "categoryIntent": "מי שרוצה פרגולה שמשמשת גם כסוכה בחג",
+      "primaryService": "showers-pergolas-railings",
+      "product": "pergolas",
+      "wordCount": 1400
+    },
+    {
+      "keyword": "מסתור כביסה מידות ותקן",
+      "secondary": ["מסתור כביסה מידות", "מסתור כביסה תקן", "מסתור כביסה בבניין"],
+      "category": "guides",
+      "categoryIntent": "דייר או קבלן שבודק מה מותר ומה המידות הנכונות",
+      "primaryService": "showers-pergolas-railings",
+      "product": "laundry",
+      "wordCount": 1300
+    },
+    {
+      "keyword": "תריס חשמלי לממ\"ד",
+      "secondary": ["תריס חשמלי בממד", "חלון אלומיניום לממ\"ד"],
+      "category": "use-cases",
+      "categoryIntent": "מי שרוצה תריס חשמלי בחלון הממ\"ד",
+      "primaryService": "electric-shutters",
+      "product": "shutters",
+      "wordCount": 1300
+    },
+    {
+      "keyword": "רפפות אלומיניום",
+      "secondary": ["חלון אלומיניום רפפה", "גדר אלומיניום רפפה", "פרגולת אלומיניום רפפות", "רפפות מסתור כביסה"],
+      "category": "guides",
+      "categoryIntent": "מי שמחפש רפפות לחלון, גדר, פרגולה או מסתור",
+      "primaryService": "showers-pergolas-railings",
+      "product": "general",
+      "wordCount": 1400
+    },
+    {
+      "keyword": "פרגולת אלומיניום צפה",
+      "secondary": ["פרגולת אלומיניום מרחפת", "פרגולה צפה"],
+      "category": "use-cases",
+      "categoryIntent": "מחפש עיצוב פרגולה מודרני בלי עמודים בולטים",
+      "primaryService": "showers-pergolas-railings",
+      "product": "pergolas",
+      "wordCount": 1300
+    },
+    {
+      "keyword": "חלון אלומיניום פינתי",
+      "secondary": ["חלון בלגי פינתי", "חלון פינתי"],
+      "category": "use-cases",
+      "categoryIntent": "אדריכל או בעל בית שמתכנן חלון פינתי",
+      "primaryService": "windows-doors",
+      "product": "windows",
+      "wordCount": 1300
+    },
+    {
+      "keyword": "שער פשפש אלומיניום",
+      "secondary": ["שער פשפש אלומיניום מחיר", "שער כניסה להולכי רגל"],
+      "category": "use-cases",
+      "categoryIntent": "בעל בית פרטי שצריך שער כניסה קטן ליד שער החניה",
+      "primaryService": "showers-pergolas-railings",
+      "product": "fences",
+      "wordCount": 1200
+    }
+  ]
+}

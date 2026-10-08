@@ -2,13 +2,15 @@
 /**
  * generate-article.mjs
  *
- * מערכת אוטומטית לכתיבת מאמרים יומית לאתר א.מ.ש אלומיניום.
+ * מערכת אוטומטית לכתיבת מאמרים (פעמיים בשבוע) לאתר א.מ.ש אלומיניום.
+ * הנושאים נלקחים מ-content/keywords/topic-queue.json (פערים ממחקר מילות המפתח).
+ * נושא שחופף למאמר קיים מדולג, וכשהתור נגמר לא נכתב מאמר.
  *
  * שימוש:
  *   ANTHROPIC_API_KEY=sk-ant-xxx node scripts/generate-article.mjs
  *
  * דגלים אופציונליים:
- *   --keyword "מילה ספציפית"    כפיית בחירת מילת מפתח
+ *   --keyword "מילה ספציפית"    כפיית נושא מתוך התור
  *   --dry-run                    בלי לכתוב לקובץ, רק להציג בקונסולה
  *   --model claude-sonnet-4-6    שינוי מודל (ברירת מחדל: claude-sonnet-4-6)
  */
@@ -17,18 +19,13 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import {
-  loadState,
-  saveState,
-  markKeywordUsed,
-  pickNextKeyword,
-  flattenKeywords,
-} from "./lib/state.mjs";
+import { loadState, saveState, markKeywordUsed } from "./lib/state.mjs";
 import { makeSlug } from "./lib/slug.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const KEYWORDS_FILE = path.join(ROOT, "content", "keywords", "keywords.json");
+const QUEUE_FILE = path.join(ROOT, "content", "keywords", "topic-queue.json");
+const CITY_KEYWORDS_FILE = path.join(ROOT, "src", "lib", "city-keywords.ts");
 const BLOG_DIR = path.join(ROOT, "content", "blog");
 
 const args = process.argv.slice(2);
@@ -55,7 +52,7 @@ const BUSINESS = {
   founderName: "נתנאל ניסים",
   founderRole: 'מנכ"ל ובעלים',
   yearsExperience: 20,
-  warrantyYears: 5,
+  warrantyYears: 10,
   phone: "055-992-2592",
   email: "allonioffice@gmail.com",
   serviceArea: "כל הארץ",
@@ -77,14 +74,14 @@ ${BUSINESS.usp}
 
 ## כללים קריטיים לכתיבה
 1. **כתוב בעברית בלבד**. אסור באנגלית (חוץ ממונחים טכניים סטנדרטיים כמו "PVC").
-2. **2000-3000 מילים** למאמר.
+2. **אורך**: לפי היעד שמצוין בבקשה. בלי ריפוד, כל פסקה צריכה להוסיף מידע.
 3. **5-8 כותרות משנה H2** (## בסימון Markdown) שמכסות את הנושא לעומקו. **אסור H1 (#)** – הכותרת הראשית כבר מופיעה בראש העמוד. התחל ישר מהפסקה הראשונה.
 4. **אסור על אימוג'ים בטקסט** (לא בכותרות, לא בפסקאות). מותר רק ב-checkmark של רשימות אם רלוונטי (✓).
 5. **אסור על "במאמר זה נדבר על..." או "לסיכום, ראינו ש..."** – פתח ישר עם תוכן.
 6. **טבלאות מחיר אם רלוונטי** (אינטנט מסחרי) – פורמט Markdown table.
 7. **רשימות עם bullets** במקום פסקאות ארוכות כשמתאים.
 8. **CTA פעיל מובלע** – לא מכירתי, אבל מזכיר את החברה בהקשר רלוונטי. למשל: "בא.מ.ש אלומיניום אנחנו מייצרים את כל הפרופילים בעצמנו, וזה מאפשר לנו..." – ולא "תזמינו עכשיו!".
-9. **קישורים פנימיים** – באופן טבעי, הזכר ובלינק את עמודי השירות:
+9. **קישורים פנימיים** – 3-5 קישורים בטקסט, באופן טבעי. מותר לקשר רק לעמודים שברשימה כאן או לרשימת המאמרים שבבקשה, בלי להמציא כתובות:
    - /services/windows-doors (חלונות, דלתות, ויטרינות)
    - /services/showers-pergolas-railings (מקלחונים, פרגולות, מעקות)
    - /services/electric-shutters (תריסים חשמליים)
@@ -99,7 +96,7 @@ ${BUSINESS.usp}
 1. **פסקת פתיחה** (60-100 מילים) – זווית מעניינת, לא הקדמה משמימה. נקודת כאב אמיתית או עובדה מפתיעה.
 2. **5-8 סקציות H2** עם תוכן עמוק לכל אחת
 3. **לפחות 1 טבלה** (אם רלוונטי לנושא – מחירים, השוואות, מפרטים)
-4. **סקציית "שאלות נפוצות"** בסוף עם 3-5 שאלות (H3 לכל שאלה)
+4. **סקציית שאלות נפוצות** בסוף: כותרת בדיוק "## שאלות נפוצות", ו-3-5 שאלות כ-H3 (###)
 5. **פסקת סיום** (50-80 מילים) – לא "לסיכום" אלא הצעת פעולה בטון מקצועי
 
 ## פלט
@@ -117,6 +114,13 @@ function buildUserPrompt(item) {
 - **שירות מרכזי מקושר**: ${item.primaryService}
 - **אורך יעד**: ~${item.wordCount} מילים
 - **קהל יעד**: בעלי בתים פרטיים, זוגות שמשפצים, אדריכלים בישראל
+
+## ביטויים נוספים שאנשים מחפשים (ממחקר מילות מפתח)
+שלב כל אחד מהם פעם אחת לפחות, באופן טבעי: בפסקת הפתיחה, בכותרת משנה או בשאלה נפוצה. אסור לדחוס או לחזור עליהם בלי סיבה.
+${(item.secondary || []).map((k) => `- ${k}`).join("\n")}
+
+## מאמרים קיימים באתר (לקישורים פנימיים בלבד, אל תכתוב שוב את התוכן שלהם)
+${(item.existingArticles || []).map((a) => `- [${a.title}](/blog/${a.slug})`).join("\n")}
 
 ## הנחיות נוספות לפי קטגוריה
 
@@ -190,20 +194,26 @@ async function generateArticle(item) {
   return { content, usage: response.usage };
 }
 
+// Meta description: whole sentences from the opening paragraph, up to 160 chars.
 function deriveDescriptionFromContent(keyword, content) {
   const firstParagraph = content.split("\n\n").find((p) => p.trim() && !p.startsWith("#")) || "";
-  const cleaned = firstParagraph.replace(/[*_`]/g, "").trim();
+  const cleaned = firstParagraph
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`]/g, "")
+    .trim();
   if (cleaned.length <= 160) return cleaned;
-  return cleaned.slice(0, 157).replace(/\s+\S*$/, "") + "...";
+  const sentences = cleaned.match(/[^.?!]+[.?!]/g) || [];
+  let out = "";
+  for (const sentence of sentences) {
+    if ((out + sentence).trim().length > 160) break;
+    out += sentence;
+  }
+  return out.trim() || cleaned.slice(0, 157).replace(/\s+\S*$/, "") + ".";
 }
 
+// The site layout appends the brand, so the title is just the keyword.
 function deriveTitleFromKeyword(keyword) {
-  const variants = [
-    `${keyword}: המדריך המלא | א.מ.ש אלומיניום`,
-    `${keyword}: כל מה שצריך לדעת | א.מ.ש אלומיניום`,
-    `${keyword} – ייצור והתקנה | א.מ.ש אלומיניום`,
-  ];
-  return variants[0];
+  return keyword;
 }
 
 function buildFrontmatter(item, slug, content) {
@@ -235,6 +245,80 @@ function frontmatterToYaml(fm) {
   return lines.join("\n");
 }
 
+// Existing articles, so the bot links to them and never writes a second page for the same search.
+function getExistingArticles() {
+  return getExistingSlugs().map((slug) => {
+    const raw = fs.readFileSync(path.join(BLOG_DIR, `${slug}.md`), "utf-8");
+    const field = (name) => (raw.match(new RegExp(`^${name}: "(.*)"$`, "m")) || [])[1] || "";
+    return { slug, title: field("title"), keyword: field("keyword") };
+  });
+}
+
+const STOP_WORDS = new Set(["אלומיניום", "של", "או", "מה", "עם", "איך", "כמה", "מחיר", "עולה", "לבית", "את", "על"]);
+const coreWords = (s) =>
+  new Set(s.replace(/["'״׳\\]/g, "").split(/[\s\-–:,]+/).filter((w) => w && !STOP_WORDS.has(w)));
+
+// Share of core words two keywords have in common (1 = same topic).
+function overlap(a, b) {
+  const wa = coreWords(a);
+  const wb = coreWords(b);
+  if (!wa.size || !wb.size) return 0;
+  let hits = 0;
+  for (const w of wa) if (wb.has(w)) hits++;
+  return hits / Math.max(wa.size, wb.size);
+}
+
+function pickNextTopic(queue, state, existing) {
+  const used = new Set(state.usedKeywords);
+  for (const topic of queue) {
+    if (used.has(topic.keyword)) continue;
+    const clash = existing.find((a) => overlap(topic.keyword, a.keyword) >= 0.75);
+    if (clash) {
+      console.log(`⏭️  "${topic.keyword}" חופף למאמר קיים "${clash.keyword}" – מדלג`);
+      state.usedKeywords.push(topic.keyword);
+      continue;
+    }
+    return topic;
+  }
+  return null;
+}
+
+// "Where we install" paragraph with cities that have real searches for this product,
+// rotating through the list so consecutive articles name different cities.
+const CITY_LABELS = {
+  windows: "חלונות אלומיניום",
+  showers: "מקלחונים",
+  pergolas: "פרגולות אלומיניום",
+  balcony: "סגירת מרפסת",
+  shutters: "תריסים חשמליים",
+  general: "עבודות אלומיניום",
+  doors: "דלתות אלומיניום",
+  fences: "גדרות ושערי אלומיניום",
+  railings: "מעקות אלומיניום",
+  laundry: "מסתורי כביסה",
+};
+
+function appendCitySection(content, item, state) {
+  if (!item.product || !fs.existsSync(CITY_KEYWORDS_FILE)) return content;
+  const ts = fs.readFileSync(CITY_KEYWORDS_FILE, "utf-8");
+  const cityMap = JSON.parse(ts.slice(ts.indexOf("= {") + 2, ts.indexOf("};") + 1));
+  const pool = cityMap[item.product] || cityMap.general;
+  if (!pool || pool.length < 2) return content;
+
+  state.cityCursor = state.cityCursor || {};
+  const start = (state.cityCursor[item.product] || 0) % pool.length;
+  const cities = [...new Set([...pool, ...pool].slice(start, start + 8))];
+  state.cityCursor[item.product] = start + 8;
+
+  const label = CITY_LABELS[item.product];
+  const list = cities.map((c) => `ב${c}`);
+  const joined = `${list.slice(0, -1).join(", ")} ו${list[list.length - 1]}`;
+  const section = `## ${label} בכל הארץ\n\nא.מ.ש אלומיניום מייצרת ומתקינה ${label} בכל הארץ, בין היתר: ${label} ${joined}. [לרשימת כל אזורי השירות](/areas).\n\n`;
+
+  const faq = content.search(/^## שאלות נפוצות/m);
+  return faq >= 0 ? content.slice(0, faq) + section + content.slice(faq) : `${content.trim()}\n\n${section}`;
+}
+
 function getExistingSlugs() {
   if (!fs.existsSync(BLOG_DIR)) return [];
   return fs
@@ -248,25 +332,33 @@ async function main() {
     fs.mkdirSync(BLOG_DIR, { recursive: true });
   }
 
-  const keywordsData = JSON.parse(fs.readFileSync(KEYWORDS_FILE, "utf-8"));
-  const allKeywords = flattenKeywords(keywordsData);
+  const queue = JSON.parse(fs.readFileSync(QUEUE_FILE, "utf-8")).topics;
   const state = loadState();
+  const existing = getExistingArticles();
 
   let item;
   if (forceKeyword) {
-    item = allKeywords.find((kw) => kw.keyword === forceKeyword);
+    item = queue.find((t) => t.keyword === forceKeyword);
     if (!item) {
-      console.error(`❌ מילת המפתח "${forceKeyword}" לא נמצאה ב-keywords.json`);
+      console.error(`❌ הנושא "${forceKeyword}" לא נמצא ב-topic-queue.json`);
       process.exit(1);
     }
   } else {
-    item = pickNextKeyword(state, allKeywords);
+    item = pickNextTopic(queue, state, existing);
+  }
+  if (!item) {
+    console.log("ℹ️  אין נושאים פנויים בתור. הוסיפו נושאים ל-content/keywords/topic-queue.json");
+    if (!dryRun) saveState(state);
+    return;
   }
 
+  item.existingArticles = existing;
   const existingSlugs = getExistingSlugs();
   const slug = makeSlug(item.keyword, existingSlugs);
 
-  const { content, usage } = await generateArticle(item);
+  const generated = await generateArticle(item);
+  const usage = generated.usage;
+  const content = appendCitySection(generated.content.replace(/\s*—\s*/g, ", "), item, state);
 
   const fm = buildFrontmatter(item, slug, content);
   const output = `${frontmatterToYaml(fm)}\n\n${content.trim()}\n`;

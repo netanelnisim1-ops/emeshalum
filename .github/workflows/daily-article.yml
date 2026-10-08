@@ -1,6 +1,6 @@
-name: Daily Blog Article
+name: Blog Article (Mon + Thu)
 
-# Triggered daily via Vercel Cron (workflow_dispatch from /api/cron/daily-article)
+# Triggered twice a week (Mon + Thu) via Vercel Cron (workflow_dispatch from /api/cron/daily-article)
 # Vercel cron is more reliable than GitHub Actions schedule.
 # Can also be triggered manually from the Actions tab.
 
@@ -70,6 +70,6 @@ jobs:
             echo "No changes to push"
           else
             DATE=$(date +"%Y-%m-%d")
-            git commit -m "chore(blog): daily article - $DATE"
+            git commit -m "chore(blog): new article - $DATE"
             git push origin main
           fi
