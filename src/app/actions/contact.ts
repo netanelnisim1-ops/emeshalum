@@ -2,6 +2,7 @@
 
 import { Resend } from "resend";
 import { BUSINESS } from "@/lib/business";
+import { verifyFormToken } from "@/lib/form-token";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
@@ -21,7 +22,12 @@ export async function submitContactForm(
   const message = String(formData.get("message") || "").trim();
   const honeypot = String(formData.get("website") || "").trim();
 
-  if (honeypot) {
+  const ts = String(formData.get("ts") || "");
+  const sig = String(formData.get("sig") || "");
+
+  // Silent "success" for bots so they don't learn what tripped them.
+  if (honeypot || !verifyFormToken(ts, sig) || isRepeatedMessage(message)) {
+    console.warn("[contact] blocked spam submission", { name, phone, message });
     return { status: "success", message: "תודה! נחזור אליכם בקרוב." };
   }
 
@@ -74,6 +80,26 @@ export async function submitContactForm(
       message: "אירעה תקלה. אנא חייגו ישירות 055-992-2592",
     };
   }
+}
+
+// Same free-text message arriving again and again = scripted spam.
+// Per-instance memory only, but warm instances catch bursts.
+const recentMessages = new Map<string, number[]>();
+const REPEAT_WINDOW_MS = 6 * 60 * 60 * 1000;
+
+function isRepeatedMessage(message: string): boolean {
+  const key = message.replace(/\s+/g, " ").trim().toLowerCase();
+  if (key.length < 15) return false;
+  const now = Date.now();
+  const hits = (recentMessages.get(key) || []).filter(
+    (t) => now - t < REPEAT_WINDOW_MS,
+  );
+  hits.push(now);
+  recentMessages.set(key, hits);
+  if (recentMessages.size > 500) {
+    recentMessages.delete(recentMessages.keys().next().value!);
+  }
+  return hits.length > 2;
 }
 
 function buildEmailHtml({

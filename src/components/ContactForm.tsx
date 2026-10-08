@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { CircleCheck, CircleAlert, LoaderCircle, ArrowLeft } from "lucide-react";
 import {
   submitContactForm,
@@ -19,6 +19,14 @@ export default function ContactForm({
     initialState,
   );
 
+  const [token, setToken] = useState({ ts: "", sig: "" });
+  useEffect(() => {
+    fetch("/api/form-token", { cache: "no-store" })
+      .then((r) => r.json())
+      .then(setToken)
+      .catch(() => {});
+  }, []);
+
   const isDark = variant === "dark";
 
   const labelCls = isDark
@@ -31,6 +39,8 @@ export default function ContactForm({
 
   return (
     <form action={formAction} className="space-y-5">
+      <input type="hidden" name="ts" value={token.ts} />
+      <input type="hidden" name="sig" value={token.sig} />
       <input
         type="text"
         name="website"
