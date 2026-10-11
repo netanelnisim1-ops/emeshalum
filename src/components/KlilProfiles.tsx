@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { CircleCheck } from "lucide-react";
 
 const KLIL_FEATURES = [
-  "פרופיל בלגי מסדרת קליל 9000 ו-קליל 4500",
+  "פרופיל בלגי מסדרות קליל 4300, 7300 ו-1700",
   "פרופילים תרמיים עם שבר תרמי לבידוד מקסימלי",
   "פרופילי הזזה בעובי דפן 1.6-2.0 מ\"מ",
   "מערכות חלונות ודלתות בהתאמה אישית",
@@ -63,6 +64,13 @@ export default function KlilProfiles() {
                 </li>
               ))}
             </ul>
+
+            <Link
+              href="/blog/prvpyly-klyl"
+              className="inline-block mt-6 text-brand-orange font-semibold hover:underline"
+            >
+              למדריך המלא לכל סדרות הפרופילים של קליל
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:gap-4">

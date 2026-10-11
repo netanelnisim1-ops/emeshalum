@@ -86,11 +86,8 @@
       "mklchvn-am-zkvkyt-shbvrh"
     ],
     "ayk-lbchvr-prgvlt-alvmynyvm": [
-      "mdryk-lbchyrt-prgvlh-lbyt-prty",
       "prgvlh-tsmvdh-av-nprdt-ytrvnvt",
       "prgvlt-alvmynyvm-lmrpst",
-      "prgvlt-alvmynyvm-lchtsr-achvryt",
-      "prgvlt-alvmynyvm-lbrykh",
       "prgvlt-alvmynyvm-lgn-yldym",
       "prgvlt-alvmynyvm-lmsadh",
       "ayk-mtkynym-prgvlh-tsmvdt-byt"
@@ -131,6 +128,11 @@
     ],
     "chlvnvt-alvmynyvm-lvylh": [
       "chlvnvt-alvmynyvm-lbyt-prty"
+    ],
+    "prgvlt-alvmynyvm-lbyt-prty": [
+      "mdryk-lbchyrt-prgvlh-lbyt-prty",
+      "prgvlt-alvmynyvm-lchtsr-achvryt",
+      "prgvlt-alvmynyvm-lbrykh"
     ]
   },
   "to_page": {
