@@ -150,7 +150,8 @@
     "סימנים שצריך להחליף חלונות אלומיניום",
     "איך לבדוק איכות התקנת אלומיניום",
     "מחיר מקלחון 90X90",
-    "דלתות כניסה מאלומיניום לבניין"
+    "דלתות כניסה מאלומיניום לבניין",
+    "איך בוחרים קבלן אלומיניום"
   ],
   "history": [
     {
@@ -1058,9 +1059,16 @@
       "slug": "dltvt-knysh-malvmynyvm-lbnyyn",
       "category": "use-cases",
       "publishedAt": "2026-10-12T04:26:56.697Z"
+    },
+    {
+      "keyword": "איך בוחרים קבלן אלומיניום",
+      "slug": "ayk-bvchrym-kbln-alvmynyvm",
+      "category": "guides",
+      "publishedAt": "2026-10-15T04:27:02.890Z"
     }
   ],
   "cityCursor": {
-    "doors": 8
+    "doors": 8,
+    "general": 8
   }
 }
