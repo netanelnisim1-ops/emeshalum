@@ -18,7 +18,14 @@ const nextConfig: NextConfig = {
     const toPages = Object.entries(consolidation.to_page).flatMap(([page, slugs]) =>
       slugs.map((slug) => ({ source: `/blog/${slug}`, destination: page, permanent: true })),
     );
-    return [...merged, ...toPages];
+    // One canonical host: www and the vercel.app alias served duplicate copies of every page.
+    const hosts = ["www.emeshalum.co.il", "emeshalum.vercel.app"].map((value) => ({
+      source: "/:path*",
+      has: [{ type: "host" as const, value }],
+      destination: "https://emeshalum.co.il/:path*",
+      permanent: true,
+    }));
+    return [...hosts, ...merged, ...toPages];
   },
   images: {
     remotePatterns: [
