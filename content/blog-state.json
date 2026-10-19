@@ -151,7 +151,8 @@
     "איך לבדוק איכות התקנת אלומיניום",
     "מחיר מקלחון 90X90",
     "דלתות כניסה מאלומיניום לבניין",
-    "איך בוחרים קבלן אלומיניום"
+    "איך בוחרים קבלן אלומיניום",
+    "היתר לסגירת מרפסת"
   ],
   "history": [
     {
@@ -1065,10 +1066,17 @@
       "slug": "ayk-bvchrym-kbln-alvmynyvm",
       "category": "guides",
       "publishedAt": "2026-10-15T04:27:02.890Z"
+    },
+    {
+      "keyword": "היתר לסגירת מרפסת",
+      "slug": "hytr-lsgyrt-mrpst",
+      "category": "guides",
+      "publishedAt": "2026-10-19T04:27:08.949Z"
     }
   ],
   "cityCursor": {
     "doors": 8,
-    "general": 8
+    "general": 8,
+    "balcony": 8
   }
 }
