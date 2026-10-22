@@ -152,7 +152,8 @@
     "מחיר מקלחון 90X90",
     "דלתות כניסה מאלומיניום לבניין",
     "איך בוחרים קבלן אלומיניום",
-    "היתר לסגירת מרפסת"
+    "היתר לסגירת מרפסת",
+    "פרגולת אלומיניום עם סנטף"
   ],
   "history": [
     {
@@ -1072,11 +1073,18 @@
       "slug": "hytr-lsgyrt-mrpst",
       "category": "guides",
       "publishedAt": "2026-10-19T04:27:08.949Z"
+    },
+    {
+      "keyword": "פרגולת אלומיניום עם סנטף",
+      "slug": "prgvlt-alvmynyvm-am-sntf",
+      "category": "comparisons",
+      "publishedAt": "2026-10-22T04:26:48.524Z"
     }
   ],
   "cityCursor": {
     "doors": 8,
     "general": 8,
-    "balcony": 8
+    "balcony": 8,
+    "pergolas": 8
   }
 }
