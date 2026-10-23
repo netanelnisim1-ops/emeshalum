@@ -6,6 +6,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ContactSection from "@/components/ContactSection";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceCities from "@/components/ServiceCities";
+import ServiceGuides from "@/components/ServiceGuides";
 import { Check } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
@@ -160,6 +161,7 @@ export default function ShowersPergolasRailingsPage() {
           </div>
         </section>
 
+        <ServiceGuides service="showers-pergolas-railings" />
         <ServiceCities products={["showers", "pergolas", "balcony"]} />
         <ServiceFAQ items={FAQ} />
         <ContactSection />

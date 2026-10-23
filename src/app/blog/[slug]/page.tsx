@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const related = getRelatedPosts(slug, post.category, 3);
+  const related = getRelatedPosts(slug, post.category, 4);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <h2 className="text-2xl md:text-3xl font-extrabold text-brand-navy-deep mb-8">
                 מאמרים נוספים שאתם עשויים לאהוב
               </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {related.map((rel) => (
                   <Link
                     key={rel.slug}

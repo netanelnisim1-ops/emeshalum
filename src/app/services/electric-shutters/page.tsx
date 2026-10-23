@@ -6,6 +6,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ContactSection from "@/components/ContactSection";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceCities from "@/components/ServiceCities";
+import ServiceGuides from "@/components/ServiceGuides";
 import { Check } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
@@ -158,6 +159,7 @@ export default function ElectricShuttersPage() {
           </div>
         </section>
 
+        <ServiceGuides service="electric-shutters" />
         <ServiceCities products={["shutters"]} />
         <ServiceFAQ items={FAQ} />
         <ContactSection />

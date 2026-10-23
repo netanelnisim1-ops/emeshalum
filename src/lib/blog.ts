@@ -83,9 +83,34 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   };
 }
 
-export function getRelatedPosts(currentSlug: string, currentCategory: string, limit = 3): BlogPostSummary[] {
-  const all = getAllPosts().filter((p) => p.slug !== currentSlug);
-  const sameCategory = all.filter((p) => p.category === currentCategory);
-  const others = all.filter((p) => p.category !== currentCategory);
-  return [...sameCategory, ...others].slice(0, limit);
+const STOP_WORDS = new Set(["אלומיניום", "של", "או", "מה", "עם", "איך", "כמה", "מחיר", "עולה", "לבית", "את", "על", "לבחור", "המדריך", "המלא"]);
+
+function topicWords(post: BlogPostFrontmatter) {
+  return new Set(
+    `${post.keyword} ${post.title}`
+      .replace(/["'״׳:–-]/g, " ")
+      .split(/\s+/)
+      .filter((w) => w.length > 1 && !STOP_WORDS.has(w)),
+  );
+}
+
+// Related articles by shared topic words first, then same service, then same category,
+// so every article gets linked from its neighbours (not just the newest posts).
+export function getRelatedPosts(currentSlug: string, currentCategory: string, limit = 4): BlogPostSummary[] {
+  const all = getAllPosts();
+  const current = all.find((p) => p.slug === currentSlug);
+  if (!current) return all.slice(0, limit);
+  const words = topicWords(current);
+  return all
+    .filter((p) => p.slug !== currentSlug)
+    .map((p) => {
+      let score = 0;
+      for (const w of topicWords(p)) if (words.has(w)) score += 3;
+      if (p.service === current.service) score += 2;
+      if (p.category === currentCategory) score += 1;
+      return { post: p, score };
+    })
+    .sort((a, b) => b.score - a.score || a.post.slug.localeCompare(b.post.slug))
+    .slice(0, limit)
+    .map((r) => r.post);
 }
