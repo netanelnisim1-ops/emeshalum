@@ -154,7 +154,8 @@
     "איך בוחרים קבלן אלומיניום",
     "היתר לסגירת מרפסת",
     "פרגולת אלומיניום עם סנטף",
-    "מעקה אלומיניום למדרגות"
+    "מעקה אלומיניום למדרגות",
+    "דלת אלומיניום למרפסת"
   ],
   "history": [
     {
@@ -1086,10 +1087,16 @@
       "slug": "makh-alvmynyvm-lmdrgvt",
       "category": "use-cases",
       "publishedAt": "2026-10-26T04:27:15.639Z"
+    },
+    {
+      "keyword": "דלת אלומיניום למרפסת",
+      "slug": "dlt-alvmynyvm-lmrpst",
+      "category": "use-cases",
+      "publishedAt": "2026-10-29T04:27:01.592Z"
     }
   ],
   "cityCursor": {
-    "doors": 8,
+    "doors": 16,
     "general": 8,
     "balcony": 8,
     "pergolas": 8,
