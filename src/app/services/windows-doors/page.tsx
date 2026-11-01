@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceCities from "@/components/ServiceCities";
 import ServiceGuides from "@/components/ServiceGuides";
+import ProductLinks from "@/components/ProductLinks";
 import { Check } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
@@ -14,7 +15,7 @@ const SITE_URL = BUSINESS.siteUrl;
 
 const TITLE = "חלונות, דלתות וויטרינות אלומיניום";
 const DESC =
-  "ייצור והתקנה של חלונות אלומיניום בלגיים, חלונות הזזה ופנורמיים, ויטרינות ענק ודלתות אלומיניום במידות מותאמות אישית. ייצור פנימי, מחירי יצרן, 5 שנות אחריות.";
+  `ייצור והתקנה של חלונות אלומיניום בלגיים, חלונות הזזה ופנורמיים, ויטרינות ענק ודלתות אלומיניום במידות מותאמות אישית. ייצור פנימי, מחירי יצרן, ${BUSINESS.warrantyYears} שנות אחריות.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -180,6 +181,7 @@ export default function WindowsDoorsPage() {
           </div>
         </section>
 
+        <ProductLinks parent="windows-doors" />
         <ServiceGuides service="windows-doors" />
         <ServiceCities products={["windows"]} />
         <ServiceFAQ items={FAQ} />

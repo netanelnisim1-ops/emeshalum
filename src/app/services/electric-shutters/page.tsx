@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceCities from "@/components/ServiceCities";
 import ServiceGuides from "@/components/ServiceGuides";
+import ProductLinks from "@/components/ProductLinks";
 import { Check } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
@@ -159,6 +160,7 @@ export default function ElectricShuttersPage() {
           </div>
         </section>
 
+        <ProductLinks parent="electric-shutters" />
         <ServiceGuides service="electric-shutters" />
         <ServiceCities products={["shutters"]} />
         <ServiceFAQ items={FAQ} />

@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceCities from "@/components/ServiceCities";
 import ServiceGuides from "@/components/ServiceGuides";
+import ProductLinks from "@/components/ProductLinks";
 import { Check } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
@@ -14,7 +15,7 @@ const SITE_URL = BUSINESS.siteUrl;
 
 const TITLE = "מקלחונים, פרגולות ומעקות אלומיניום";
 const DESC =
-  "מקלחוני זכוכית מעוצבים, פרגולות אלומיניום עמידות, מעקות בטיחותיים וסגירות חורף למרפסות. ייצור פנימי, התקנה מקצועית, 5 שנות אחריות.";
+  `מקלחוני זכוכית מעוצבים, פרגולות אלומיניום עמידות, מעקות בטיחותיים וסגירות חורף למרפסות. ייצור פנימי, התקנה מקצועית, ${BUSINESS.warrantyYears} שנות אחריות.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -161,6 +162,7 @@ export default function ShowersPergolasRailingsPage() {
           </div>
         </section>
 
+        <ProductLinks parent="showers-pergolas-railings" />
         <ServiceGuides service="showers-pergolas-railings" />
         <ServiceCities products={["showers", "pergolas", "balcony"]} />
         <ServiceFAQ items={FAQ} />
