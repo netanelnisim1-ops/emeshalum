@@ -155,7 +155,8 @@
     "היתר לסגירת מרפסת",
     "פרגולת אלומיניום עם סנטף",
     "מעקה אלומיניום למדרגות",
-    "דלת אלומיניום למרפסת"
+    "דלת אלומיניום למרפסת",
+    "גדר אלומיניום לבריכה"
   ],
   "history": [
     {
@@ -1093,6 +1094,12 @@
       "slug": "dlt-alvmynyvm-lmrpst",
       "category": "use-cases",
       "publishedAt": "2026-10-29T04:27:01.592Z"
+    },
+    {
+      "keyword": "גדר אלומיניום לבריכה",
+      "slug": "gdr-alvmynyvm-lbrykh",
+      "category": "use-cases",
+      "publishedAt": "2026-11-02T04:27:45.835Z"
     }
   ],
   "cityCursor": {
@@ -1100,6 +1107,7 @@
     "general": 8,
     "balcony": 8,
     "pergolas": 8,
-    "railings": 8
+    "railings": 8,
+    "fences": 8
   }
 }
