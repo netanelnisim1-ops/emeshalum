@@ -156,7 +156,8 @@
     "פרגולת אלומיניום עם סנטף",
     "מעקה אלומיניום למדרגות",
     "דלת אלומיניום למרפסת",
-    "גדר אלומיניום לבריכה"
+    "גדר אלומיניום לבריכה",
+    "חלונות אלומיניום עם נתק תרמי"
   ],
   "history": [
     {
@@ -1100,6 +1101,12 @@
       "slug": "gdr-alvmynyvm-lbrykh",
       "category": "use-cases",
       "publishedAt": "2026-11-02T04:27:45.835Z"
+    },
+    {
+      "keyword": "חלונות אלומיניום עם נתק תרמי",
+      "slug": "chlvnvt-alvmynyvm-am-ntk-trmy",
+      "category": "guides",
+      "publishedAt": "2026-11-05T04:27:53.994Z"
     }
   ],
   "cityCursor": {
@@ -1108,6 +1115,7 @@
     "balcony": 8,
     "pergolas": 8,
     "railings": 8,
-    "fences": 8
+    "fences": 8,
+    "windows": 8
   }
 }
