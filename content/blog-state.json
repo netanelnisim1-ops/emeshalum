@@ -157,7 +157,8 @@
     "מעקה אלומיניום למדרגות",
     "דלת אלומיניום למרפסת",
     "גדר אלומיניום לבריכה",
-    "חלונות אלומיניום עם נתק תרמי"
+    "חלונות אלומיניום עם נתק תרמי",
+    "סוגי זכוכית למקלחון"
   ],
   "history": [
     {
@@ -1107,6 +1108,12 @@
       "slug": "chlvnvt-alvmynyvm-am-ntk-trmy",
       "category": "guides",
       "publishedAt": "2026-11-05T04:27:53.994Z"
+    },
+    {
+      "keyword": "סוגי זכוכית למקלחון",
+      "slug": "svgy-zkvkyt-lmklchvn",
+      "category": "guides",
+      "publishedAt": "2026-11-09T04:27:24.226Z"
     }
   ],
   "cityCursor": {
@@ -1116,6 +1123,7 @@
     "pergolas": 8,
     "railings": 8,
     "fences": 8,
-    "windows": 8
+    "windows": 8,
+    "showers": 8
   }
 }
