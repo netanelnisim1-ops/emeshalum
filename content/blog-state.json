@@ -158,7 +158,8 @@
     "דלת אלומיניום למרפסת",
     "גדר אלומיניום לבריכה",
     "חלונות אלומיניום עם נתק תרמי",
-    "סוגי זכוכית למקלחון"
+    "סוגי זכוכית למקלחון",
+    "פרגולת אלומיניום לסוכה"
   ],
   "history": [
     {
@@ -1114,13 +1115,19 @@
       "slug": "svgy-zkvkyt-lmklchvn",
       "category": "guides",
       "publishedAt": "2026-11-09T04:27:24.226Z"
+    },
+    {
+      "keyword": "פרגולת אלומיניום לסוכה",
+      "slug": "prgvlt-alvmynyvm-lsvkh",
+      "category": "use-cases",
+      "publishedAt": "2026-11-12T04:27:28.903Z"
     }
   ],
   "cityCursor": {
     "doors": 16,
     "general": 8,
     "balcony": 8,
-    "pergolas": 8,
+    "pergolas": 16,
     "railings": 8,
     "fences": 8,
     "windows": 8,
