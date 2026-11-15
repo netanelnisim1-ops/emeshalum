@@ -168,7 +168,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
     slug: "chlvnvt-kyp",
     photos: ["chalon-kip-mitbach", "chalon-amvatya-im-trys", "chalon-tsir-im-kvuim"],
     keyword: "חלונות קיפ",
-    seoTitle: "חלון קיפ ודריי קיפ לאמבטיה, למקלחת ולשירותים | לפי מידה, אחריות {W} שנים",
+    seoTitle: "חלון קיפ לאמבטיה ולמקלחת, לפי מידה | אחריות {W} שנים",
     description: "חלון קיפ לאמבטיה, למקלחת ולשירותים, וחלון דריי קיפ לחדרי ילדים. חלונות אמבטיה מאלומיניום לפי מידה, עם התקנה ואחריות ל-{W} שנים.",
     parent: "windows-doors",
     cityProduct: "windows",
@@ -620,7 +620,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   {
     slug: "makvt-alvmynyvm",
     keyword: "מעקות אלומיניום",
-    seoTitle: "מעקות אלומיניום וזכוכית לפי מידה, למרפסת ולמדרגות | אחריות {W} שנים",
+    seoTitle: "מעקות אלומיניום וזכוכית לפי מידה | אחריות {W} שנים",
     description: "מעקות אלומיניום לפי מידה למרפסת ולמדרגות: מעקה זכוכית, פסים או אטום. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
     parent: "showers-pergolas-railings",
     cityProduct: "general",
@@ -922,7 +922,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   {
     slug: "vylvn-zkvkyt-lmrpst",
     keyword: "וילון זכוכית למרפסת",
-    seoTitle: "וילון זכוכית למרפסת: סגירת מרפסת זכוכית מתקפלת ונאספת | אחריות {W} שנים",
+    seoTitle: "וילון זכוכית למרפסת: זכוכית מתקפלת ונאספת | אחריות {W} שנים",
     description: "וילון זכוכית למרפסת לפי מידה: זכוכית מתקפלת (נאספת, אקורדיון) שנפתחת עד הסוף. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
     parent: "windows-doors",
     cityProduct: "balcony",

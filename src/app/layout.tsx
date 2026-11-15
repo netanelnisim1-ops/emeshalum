@@ -26,7 +26,7 @@ const BUSINESS_EMAIL = "allonioffice@gmail.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "א.מ.ש אלומיניום (אמש אלומיניום): חלונות, דלתות ופרגולות לפי מידה, אחריות 10 שנים",
+    default: "א.מ.ש אלומיניום (אמש): חלונות ודלתות לפי מידה, אחריות 10 שנים",
     template: "%s | א.מ.ש אלומיניום",
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     locale: "he_IL",
     url: SITE_URL,
     siteName: BUSINESS_NAME,
-    title: "א.מ.ש אלומיניום (אמש אלומיניום): חלונות, דלתות ופרגולות לפי מידה, אחריות 10 שנים",
+    title: "א.מ.ש אלומיניום (אמש): חלונות ודלתות לפי מידה, אחריות 10 שנים",
     description:
       "אמש אלומיניום - חלונות אלומיניום, חלונות בלגיים, ויטרינות, דלתות, פרגולות ותריסים חשמליים לפי מידה. מחיר יצרן, התקנה בכל הארץ ואחריות ל-10 שנים.",
     images: [
@@ -121,7 +121,7 @@ const localBusinessJsonLd = {
     name: "נתנאל ניסים",
     jobTitle: "מנכ\"ל ובעלים",
   },
-  foundingDate: "2005",
+  foundingDate: "2006",
   slogan: "מגשימים חלומות מעוצבים",
   sameAs: ["https://www.instagram.com/aluminium_emesh/"],
   hasOfferCatalog: {

@@ -9,7 +9,7 @@ import { BUSINESS } from "@/lib/business";
 import { Factory, Award, Users, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "אודות א.מ.ש אלומיניום | יצרני אלומיניום עם ניסיון של 20+ שנה",
+  title: { absolute: "אודות א.מ.ש אלומיניום - יצרן חלונות ודלתות מאז 2006" },
   description:
     "א.מ.ש אלומיניום – יצרני חלונות אלומיניום, פרגולות ותריסים חשמליים בישראל. למעלה מ-20 שנות ניסיון, מפעל פנימי לפרופיל, זכוכית, צבע ופרזול. שירות בכל הארץ.",
   alternates: { canonical: "/about" },
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 <strong className="text-brand-navy-deep">
                   {BUSINESS.founderName}
                 </strong>
-                , קבלן אלומיניום ותיק עם למעלה מ-15 שנות ניסיון בשטח. נתנאל הקים
+                , קבלן אלומיניום ותיק. נתנאל הקים
                 את המפעל מתוך הבנה ברורה: כדי לתת ללקוח מוצר מצוין, צריך לשלוט
                 בכל שלב בתהליך – ולא להסתמך על שרשרת של ספקים חיצוניים.
               </p>

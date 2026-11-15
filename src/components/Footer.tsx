@@ -128,6 +128,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-white/50">
           <p>© {new Date().getFullYear()} {BUSINESS.name} · ח.פ {BUSINESS.businessId}. כל הזכויות שמורות.</p>
+          <p className="flex gap-4">
+            <Link href="/privacy" className="hover:text-white transition-colors">מדיניות פרטיות</Link>
+            <Link href="/accessibility" className="hover:text-white transition-colors">הצהרת נגישות</Link>
+          </p>
           <p>
             נבנה במחשבה על איכות. {BUSINESS.founderName}, {BUSINESS.founderRole}.
           </p>

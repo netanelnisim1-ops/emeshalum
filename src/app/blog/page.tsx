@@ -9,7 +9,7 @@ import { getAllPosts } from "@/lib/blog";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "בלוג מקצועי | טיפים, מדריכים ומחירים – א.מ.ש אלומיניום",
+  title: "בלוג אלומיניום: מדריכים ומחירונים",
   description:
     "מאמרים ומדריכים על חלונות אלומיניום, פרגולות, מקלחונים ותריסים חשמליים. טיפים מבעלי הניסיון, השוואות, מחירים והמלצות מקצועיות.",
   alternates: { canonical: "/blog" },

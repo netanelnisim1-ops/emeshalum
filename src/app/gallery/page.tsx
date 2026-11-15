@@ -29,7 +29,7 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 export const metadata: Metadata = {
-  title: "גלריית פרויקטים | חלונות, פרגולות ותריסים – א.מ.ש אלומיניום",
+  title: "גלריית עבודות: חלונות ודלתות אלומיניום",
   description:
     "גלריית פרויקטים של א.מ.ש אלומיניום – חלונות בלגיים, ויטרינות, פרגולות, מקלחונים ותריסים חשמליים בבתים פרטיים, וילות ומבני מגורים בכל הארץ.",
   alternates: { canonical: "/gallery" },
