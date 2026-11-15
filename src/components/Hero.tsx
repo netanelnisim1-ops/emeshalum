@@ -66,7 +66,7 @@ export default function Hero() {
               מחיר יצרן, ללא תיווך
             </p>
             <p className="text-white/90 text-base md:text-lg font-semibold mt-1">
-              קונים ישירות מהמפעל, בלי פערי תיווך
+              ישירות מהמפעל, בלי פערי תיווך
             </p>
           </div>
 
