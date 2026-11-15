@@ -58,6 +58,18 @@ export default function Hero() {
             <span className="text-white/90">בין הבית לעולם.</span>
           </h1>
 
+          <div
+            className="mt-8 inline-block bg-brand-orange text-white rounded-2xl px-6 md:px-8 py-4 md:py-5 shadow-2xl shadow-brand-orange/40 animate-fade-up"
+            style={{ animationDelay: "0.18s" }}
+          >
+            <p className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+              מחיר יצרן, ללא תיווך
+            </p>
+            <p className="text-white/90 text-base md:text-lg font-semibold mt-1">
+              קונים ישירות מהמפעל, בלי פערי תיווך
+            </p>
+          </div>
+
           <p
             className="text-white text-lg md:text-xl mt-7 leading-relaxed max-w-2xl text-pretty animate-fade-up"
             style={{
@@ -99,7 +111,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/15">
               <span className="flex items-center justify-center w-7 h-7 bg-brand-orange rounded-full text-white text-base font-extrabold shrink-0">✓</span>
-              <span className="text-white font-bold text-base md:text-lg">מחירי יצרן הוגנים</span>
+              <span className="text-white font-bold text-base md:text-lg">התקנה בכל הארץ</span>
             </div>
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/15">
               <span className="flex items-center justify-center w-7 h-7 bg-brand-orange rounded-full text-white text-base font-extrabold shrink-0">✓</span>
