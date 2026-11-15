@@ -3,6 +3,7 @@
 export type ProjectPhoto = { name: string; src: string; caption: string; category: string; width: number; height: number };
 
 export const PROJECT_PHOTOS: ProjectPhoto[] = [
+  { name: "dlatot-tsir-salon-lagina", src: "/images/projects/dlatot-tsir-salon-lagina.jpg", caption: "דלתות ציר כפולות מאלומיניום ביציאה מהסלון לגינה", category: "דלתות", width: 720, height: 720 },
   { name: "chalon-belgi-mitbach-pinati", src: "/images/projects/chalon-belgi-mitbach-pinati.jpg", caption: "חלונות בלגיים בגוון ברונזה במטבח פינתי", category: "חלונות בלגיים", width: 960, height: 960 },
   { name: "sgirat-patio-zchuchit", src: "/images/projects/sgirat-patio-zchuchit.jpg", caption: "סגירת פטיו באלומיניום וזכוכית", category: "חדרי זכוכית וסגירות", width: 1080, height: 720 },
   { name: "chalon-amvatya-im-trys", src: "/images/projects/chalon-amvatya-im-trys.jpg", caption: "חלון אלומיניום עם תריס בחדר רחצה", category: "חלונות לאמבטיה", width: 640, height: 960 },

@@ -341,7 +341,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "dltvt-alvmynyvm",
-    photos: ["delet-pnim-zchuchit-mechoretzet", "delet-knisa-vechalon-belgi", "delet-pnim-zchuchit-mechoretzet-2"],
+    photos: ["dlatot-tsir-salon-lagina", "delet-pnim-zchuchit-mechoretzet", "delet-knisa-vechalon-belgi"],
     keyword: "דלתות אלומיניום",
     seoTitle: "דלתות אלומיניום לפי מידה: כניסה, הזזה ופנים | אחריות {W} שנים",
     description: "דלתות אלומיניום לפי מידה: דלתות כניסה, דלתות הזזה, דלת בלגית ודלתות פנים. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
