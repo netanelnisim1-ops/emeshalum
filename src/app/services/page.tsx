@@ -9,7 +9,7 @@ import { ArrowLeft } from "lucide-react";
 import { SERVICE_PAGES, BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "עבודות אלומיניום: חלונות, פרגולות ותריסים",
+  title: "עבודות אלומיניום במחיר משתלם, לפי מידה",
   description:
     "כל שירותי האלומיניום של א.מ.ש – חלונות, דלתות, ויטרינות, מקלחונים, פרגולות, מעקות ותריסים חשמליים. ייצור עצמי, מחירי יצרן, 10 שנות אחריות.",
   alternates: { canonical: "/services" },

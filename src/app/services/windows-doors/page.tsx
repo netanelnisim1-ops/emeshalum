@@ -18,7 +18,7 @@ const DESC =
   `ייצור והתקנה של חלונות אלומיניום בלגיים, חלונות הזזה ופנורמיים, ויטרינות ענק ודלתות אלומיניום במידות מותאמות אישית. ייצור פנימי, מחירי יצרן, ${BUSINESS.warrantyYears} שנות אחריות.`;
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: `${TITLE} במחיר משתלם, לפי מידה`,
   description: DESC,
   alternates: { canonical: "/services/windows-doors" },
   openGraph: {

@@ -18,7 +18,7 @@ const DESC =
   "תריסי אור חשמליים, תריסי גלילה, רשתות נגד יתושים ומערכות הצללה משולבות בחלון. תקני בטיחות מלאים, שלט אלחוטי, חיבור לבית חכם.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: `${TITLE} במחיר משתלם, לפי מידה`,
   description: DESC,
   alternates: { canonical: "/services/electric-shutters" },
   openGraph: {

@@ -18,7 +18,7 @@ const DESC =
   `מקלחוני זכוכית מעוצבים, פרגולות אלומיניום עמידות, מעקות בטיחותיים וסגירות חורף למרפסות. ייצור פנימי, התקנה מקצועית, ${BUSINESS.warrantyYears} שנות אחריות.`;
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: `${TITLE} במחיר משתלם, לפי מידה`,
   description: DESC,
   alternates: { canonical: "/services/showers-pergolas-railings" },
   openGraph: {

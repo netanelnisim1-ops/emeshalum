@@ -26,7 +26,7 @@ const BUSINESS_EMAIL = "allonioffice@gmail.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "א.מ.ש אלומיניום (אמש): חלונות ודלתות לפי מידה, אחריות 10 שנים",
+    default: "א.מ.ש אלומיניום (אמש): עבודות אלומיניום במחיר משתלם, לפי מידה",
     template: "%s | א.מ.ש אלומיניום",
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     locale: "he_IL",
     url: SITE_URL,
     siteName: BUSINESS_NAME,
-    title: "א.מ.ש אלומיניום (אמש): חלונות ודלתות לפי מידה, אחריות 10 שנים",
+    title: "א.מ.ש אלומיניום (אמש): עבודות אלומיניום במחיר משתלם, לפי מידה",
     description:
       "אמש אלומיניום - חלונות אלומיניום, חלונות בלגיים, ויטרינות, דלתות, פרגולות ותריסים חשמליים לפי מידה. מחיר יצרן, התקנה בכל הארץ ואחריות ל-10 שנים.",
     images: [
