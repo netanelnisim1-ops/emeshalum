@@ -4,11 +4,12 @@ import { Star, ExternalLink } from "lucide-react";
 // (first name + initial is fine) and update the rating/count when new reviews come in.
 const GOOGLE_RATING = 5.0;
 const GOOGLE_REVIEW_COUNT = 4;
+// Official Google reviews URLs by place ID (the g.page short link opened a blank search page on mobile).
 // Direct share link of OUR Business Profile (Maps > the profile > Share). A name search lands on a list
 // that also shows the old rented-site profile and competitors, so leave empty until we have the real link.
-const GOOGLE_REVIEWS_URL = "https://g.page/r/CWc-vM1ohgJkEAE";
+const GOOGLE_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJ4Ru8GGnurqYRZz68zWiGAmQ";
 // Short "write a review" link from the Business Profile ("קבלת ביקורות נוספות"). Empty until we have it.
-const WRITE_REVIEW_URL = "https://g.page/r/CWc-vM1ohgJkEAE/review";
+const WRITE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJ4Ru8GGnurqYRZz68zWiGAmQ";
 
 type GoogleReview = { author: string; rating: number; text: string; when?: string };
 const GOOGLE_REVIEWS: GoogleReview[] = [
