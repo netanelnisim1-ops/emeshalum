@@ -14,9 +14,29 @@ const WRITE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=Ch
 type GoogleReview = { author: string; rating: number; text: string; when?: string };
 const GOOGLE_REVIEWS: GoogleReview[] = [
   {
+    author: "",
+    rating: 5,
+    text: "שרות מעולה, מקצועי אדיב ועונה מיד. סופר מרוצה מהתוצאה 🌼🌼",
+  },
+  {
+    author: "משה קאזן",
+    rating: 5,
+    text: "שירות אדיב ומקצועי ... ולמרות שהייתה לי בעיה שלא קשורה אליו הוא הצליח לפתור לי אותה במקום.",
+  },
+  {
     author: "Hadas De-Vir",
     rating: 5,
     text: "שרות מעל ומעבר עם חיוך. נתנאל התקין לנו בדירה את כל חלונות האלומיניום. וגם תריסים חשמליים. והכל בלי לסחוב זמן. תוצאה מהממת ומחירים ממש הוגנים",
+  },
+  {
+    author: "dudu arviv",
+    rating: 5,
+    text: "עשינו אצלו כמעט את כל החלונות בבית. מדובר בבחור מקצועי, מגדיל ראש...",
+  },
+  {
+    author: "אליקים כרוב",
+    rating: 5,
+    text: "נתנאל עשה עבודה מקצועית איכותית ויפה. ברמה גבוהה. והכל באווירה טובה ונעימה. מומלץ!",
   },
 ];
 
@@ -95,7 +115,7 @@ export default function Testimonials() {
                   {r.text}
                 </blockquote>
                 <figcaption className="pt-4 border-t border-brand-stone flex items-center justify-between">
-                  <span className="font-bold text-brand-navy-deep">{r.author}</span>
+                  <span className="font-bold text-brand-navy-deep">{r.author || "לקוח/ה"}</span>
                   <span className="text-brand-mist text-sm">
                     {r.when ? `${r.when} · ` : ""}ביקורת בגוגל
                   </span>
