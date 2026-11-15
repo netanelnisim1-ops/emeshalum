@@ -1,16 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PageHero({
   eyebrow,
   title,
   subtitle,
   image,
+  imageAlt,
   breadcrumbs,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   image?: string;
+  imageAlt?: string;
   breadcrumbs?: { label: string; href?: string }[];
 }) {
   const bg =
@@ -20,10 +23,14 @@ export default function PageHero({
   return (
     <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-end overflow-hidden pt-24 pb-12">
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${bg}')` }}
-          aria-hidden
+        {/* A real <img> (not a CSS background) so Google can index it and use it as the result thumbnail. */}
+        <Image
+          src={bg}
+          alt={imageAlt || `${title} - א.מ.ש אלומיניום`}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div
           className="absolute inset-0"

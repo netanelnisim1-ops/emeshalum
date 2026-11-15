@@ -10,7 +10,6 @@
       "chlvnvt-alvmynyvm-lchdr-yldym",
       "chlvnvt-alvmynyvm-lmtbch",
       "chlvnvt-alvmynyvm-ldyrt-gn",
-      "chlvnvt-alvmynyvm-lchdr-ambtyh",
       "chlvnvt-alvmynyvm-lmrpst"
     ],
     "symnym-shtsryk-lhchlyf-chlvnvt-alvmynyvm": [
@@ -37,9 +36,7 @@
       "prvpyl-blgy-av-prvpyl-ayrvpay-hbdlym",
       "ayk-mtkynym-chlvn-blgy"
     ],
-    "chlvn-hzzh-av-chlvn-kyp-mh-lbchvr": [
-      "mhv-chlvn-kyp-dryy-kyp"
-    ],
+    "chlvn-hzzh-av-chlvn-kyp-mh-lbchvr": [],
     "ayk-lbchvr-zkvkyt-lchlvn": [
       "mhy-zkvkyt-mbvddt-trmyt",
       "mchyr-zkvkyt-mbvddt-lchlvn",
@@ -156,6 +153,10 @@
       "prgvlvt-alvmynyvm-bhrtslyh",
       "prgvlvt-alvmynyvm-brannh",
       "trysym-chshmlyym-bhrtslyh"
+    ],
+    "/services/chlvnvt-kyp": [
+      "mhv-chlvn-kyp-dryy-kyp",
+      "chlvnvt-alvmynyvm-lchdr-ambtyh"
     ]
   }
 }
