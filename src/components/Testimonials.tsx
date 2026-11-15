@@ -3,7 +3,7 @@ import { Star, ExternalLink } from "lucide-react";
 // Real reviews from the Google Business Profile only. Copy them exactly as written on Google
 // (first name + initial is fine) and update the rating/count when new reviews come in.
 const GOOGLE_RATING = 5.0;
-const GOOGLE_REVIEW_COUNT = 4;
+const GOOGLE_REVIEW_COUNT = 5;
 // Official Google reviews URLs by place ID (the g.page short link opened a blank search page on mobile).
 // Direct share link of OUR Business Profile (Maps > the profile > Share). A name search lands on a list
 // that also shows the old rented-site profile and competitors, so leave empty until we have the real link.
