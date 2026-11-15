@@ -14,7 +14,7 @@ const WRITE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=Ch
 type GoogleReview = { author: string; rating: number; text: string; when?: string };
 const GOOGLE_REVIEWS: GoogleReview[] = [
   {
-    author: "",
+    author: "נילי ישראל",
     rating: 5,
     text: "שרות מעולה, מקצועי אדיב ועונה מיד. סופר מרוצה מהתוצאה 🌼🌼",
   },
