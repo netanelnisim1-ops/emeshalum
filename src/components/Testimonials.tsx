@@ -6,12 +6,18 @@ const GOOGLE_RATING = 5.0;
 const GOOGLE_REVIEW_COUNT = 3;
 // Direct share link of OUR Business Profile (Maps > the profile > Share). A name search lands on a list
 // that also shows the old rented-site profile and competitors, so leave empty until we have the real link.
-const GOOGLE_REVIEWS_URL = "";
+const GOOGLE_REVIEWS_URL = "https://g.page/r/CWc-vM1ohgJkEAE";
 // Short "write a review" link from the Business Profile ("קבלת ביקורות נוספות"). Empty until we have it.
-const WRITE_REVIEW_URL = "";
+const WRITE_REVIEW_URL = "https://g.page/r/CWc-vM1ohgJkEAE/review";
 
 type GoogleReview = { author: string; rating: number; text: string; when?: string };
-const GOOGLE_REVIEWS: GoogleReview[] = [];
+const GOOGLE_REVIEWS: GoogleReview[] = [
+  {
+    author: "Hadas De-Vir",
+    rating: 5,
+    text: "שרות מעל ומעבר עם חיוך. נתנאל התקין לנו בדירה את כל חלונות האלומיניום. וגם תריסים חשמליים. והכל בלי לסחוב זמן. תוצאה מהממת ומחירים ממש הוגנים",
+  },
+];
 
 function Stars({ count, size = "w-5 h-5" }: { count: number; size?: string }) {
   return (
