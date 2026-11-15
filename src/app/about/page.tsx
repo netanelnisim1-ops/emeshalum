@@ -47,7 +47,7 @@ export default function AboutPage() {
           eyebrow="אודות"
           title="20+ שנות ניסיון. מפעל אחד. סטנדרט אחד."
           subtitle="א.מ.ש אלומיניום הוקמה כדי לפתור בעיה אמיתית בענף הבנייה: שרשרת ספקים מסורבלת שגורמת לעיכובים, פערי מחירים והעברת אחריות. אנחנו מציעים גישה אחרת – יצרן אחד שאחראי לכל החלון, מהפרופיל ועד המנעול."
-          image="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=2400&q=80"
+          image="/images/projects/delet-knisa-vechalon-belgi.jpg"
           breadcrumbs={[
             { label: "בית", href: "/" },
             { label: "אודות" },

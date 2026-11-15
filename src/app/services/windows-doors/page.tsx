@@ -109,7 +109,7 @@ export default function WindowsDoorsPage() {
           eyebrow="שירות 1 מתוך 3"
           title="חלונות, דלתות וויטרינות אלומיניום"
           subtitle="חלונות בלגיים, חלונות הזזה ופנורמיים, ויטרינות ענק ודלתות מותאמות אישית – הכל מיוצר במפעל שלנו, בדיוק לפי המפרט והעיצוב שלכם."
-          image="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=80"
+          image="/images/projects/chalon-belgi-erker.jpg"
           breadcrumbs={[
             { label: "בית", href: "/" },
             { label: "שירותים", href: "/services" },

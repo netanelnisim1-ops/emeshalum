@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { ArrowLeft, Phone } from "lucide-react";
+import Image from "next/image";
 import { BUSINESS } from "@/lib/business";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center animate-slow-zoom"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80')",
-          }}
-          aria-hidden
+        <Image
+          src="/images/projects/chalon-belgi-erker.jpg"
+          alt="חלון בלגי פינתי עם נוף לגינה - עבודה של א.מ.ש אלומיניום"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover animate-slow-zoom"
         />
         <div
           className="absolute inset-0"

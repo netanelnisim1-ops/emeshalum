@@ -18,7 +18,7 @@ export default function PageHero({
 }) {
   const bg =
     image ||
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80";
+    "/images/projects/chalon-vedelet-hazaza-trysim.jpg";
 
   return (
     <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-end overflow-hidden pt-24 pb-12">

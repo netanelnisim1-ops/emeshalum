@@ -12,7 +12,7 @@ export default function ContactSection() {
         className="absolute inset-0 opacity-15"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2400&q=80')",
+            "url('/images/projects/chalon-belgi-erker-mitbach.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 
 const SERVICE_IMAGES: Record<string, string> = {
   "windows-doors":
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80",
+    "/images/projects/delet-hazaza-salon.jpg",
   "showers-pergolas-railings":
-    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=80",
+    "/images/projects/chalon-vedelet-hazaza-trysim.jpg",
   "electric-shutters":
-    "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1400&q=80",
+    "/images/projects/chalon-im-trys-glila.jpg",
 };
 
 export default function ServicesPage() {

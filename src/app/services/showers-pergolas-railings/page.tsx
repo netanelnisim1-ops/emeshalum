@@ -90,7 +90,7 @@ export default function ShowersPergolasRailingsPage() {
           eyebrow="שירות 2 מתוך 3"
           title="מקלחונים, פרגולות ומעקות אלומיניום"
           subtitle="מעטפת אלומיניום מלאה לבית – מקלחוני זכוכית מעוצבים, פרגולות עמידות לעשרות שנים, מעקות בטיחותיים וסגירות חורף למרפסות."
-          image="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2400&q=80"
+          image="/images/projects/chalon-vedelet-hazaza-trysim.jpg"
           breadcrumbs={[
             { label: "בית", href: "/" },
             { label: "שירותים", href: "/services" },

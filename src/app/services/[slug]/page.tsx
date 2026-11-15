@@ -12,6 +12,8 @@ import { Check, ArrowLeft } from "lucide-react";
 import { BUSINESS, SERVICE_PAGES } from "@/lib/business";
 import { PRODUCT_PAGES, getProductPage } from "@/lib/product-pages";
 import { getAllPosts } from "@/lib/blog";
+import Image from "next/image";
+import { photo } from "@/lib/projects";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -53,6 +55,7 @@ export default async function ProductPage({ params }: PageProps) {
     .filter((p) => p !== undefined);
   const faq = page.faq.map(({ q, a }) => ({ q: w(q), a: w(a) }));
   const url = `${BUSINESS.siteUrl}/services/${slug}`;
+  const photos = (page.photos || []).map(photo);
 
   const jsonLd = [
     {
@@ -96,6 +99,8 @@ export default async function ProductPage({ params }: PageProps) {
           eyebrow={`לפי מידה · אחריות ${BUSINESS.warrantyYears} שנים`}
           title={page.keyword}
           subtitle={page.heroSubtitle}
+          image={photos[0]?.src}
+          imageAlt={photos[0] ? `${photos[0].caption} - עבודה של ${BUSINESS.name}` : undefined}
           breadcrumbs={[
             { label: "בית", href: "/" },
             { label: parent.shortTitle, href: `/services/${parent.slug}` },
@@ -110,6 +115,33 @@ export default async function ProductPage({ params }: PageProps) {
                 <p key={p.slice(0, 24)}>{w(p)}</p>
               ))}
             </div>
+
+            {photos.length > 0 && (
+              <div className="mt-10">
+                <h2 className="text-brand-navy-deep text-xl md:text-2xl font-bold mb-4">
+                  מהעבודות שלנו
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {photos.map((ph) => (
+                    <figure key={ph.name} className="relative aspect-square overflow-hidden rounded-xl bg-brand-stone">
+                      <Image
+                        src={ph.src}
+                        alt={ph.caption}
+                        fill
+                        sizes="(min-width: 768px) 280px, 50vw"
+                        className="object-cover"
+                      />
+                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs md:text-sm p-2">
+                        {ph.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+                <Link href="/gallery" className="inline-block mt-3 text-brand-orange font-semibold text-sm hover:underline">
+                  לכל העבודות בגלריה
+                </Link>
+              </div>
+            )}
 
             <h2 className="text-brand-navy-deep text-2xl md:text-3xl font-bold mt-12 mb-5">
               {page.typesTitle}

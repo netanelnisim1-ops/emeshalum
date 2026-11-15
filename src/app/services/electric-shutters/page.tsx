@@ -90,7 +90,7 @@ export default function ElectricShuttersPage() {
           eyebrow="שירות 3 מתוך 3"
           title="תריסים חשמליים ומערכות הצללה"
           subtitle="תריסי אור חשמליים, תריסי גלילה ורשתות נגד יתושים – משולבים באופן הרמוני עם החלון, תומכים בבית חכם, ועם תקני בטיחות מלאים."
-          image="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=2400&q=80"
+          image="/images/projects/chalon-im-trys-glila.jpg"
           breadcrumbs={[
             { label: "בית", href: "/" },
             { label: "שירותים", href: "/services" },

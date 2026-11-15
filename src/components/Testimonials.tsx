@@ -4,9 +4,9 @@ import { Star, ExternalLink } from "lucide-react";
 // (first name + initial is fine) and update the rating/count when new reviews come in.
 const GOOGLE_RATING = 5.0;
 const GOOGLE_REVIEW_COUNT = 3;
-const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent("א.מ.ש אלומיניום 055-992-2592");
+// Direct share link of OUR Business Profile (Maps > the profile > Share). A name search lands on a list
+// that also shows the old rented-site profile and competitors, so leave empty until we have the real link.
+const GOOGLE_REVIEWS_URL = "";
 // Short "write a review" link from the Business Profile ("קבלת ביקורות נוספות"). Empty until we have it.
 const WRITE_REVIEW_URL = "";
 
@@ -52,15 +52,17 @@ export default function Testimonials() {
             {GOOGLE_REVIEW_COUNT} ביקורות בגוגל
           </div>
           <div className="flex flex-wrap justify-center gap-3 mt-5">
-            <a
-              href={GOOGLE_REVIEWS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-brand-orange font-semibold hover:underline"
-            >
-              לכל הביקורות בגוגל
-              <ExternalLink className="w-4 h-4" />
-            </a>
+            {GOOGLE_REVIEWS_URL && (
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand-orange font-semibold hover:underline"
+              >
+                לכל הביקורות בגוגל
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            )}
             {WRITE_REVIEW_URL && (
               <a
                 href={WRITE_REVIEW_URL}

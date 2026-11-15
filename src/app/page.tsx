@@ -16,13 +16,14 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <Hero />
+        {/* Lead form right after the hero, so paid traffic sees where to leave details immediately. */}
+        <ContactSection />
         <ProblemSolution />
         <AudienceSegments />
         <ServicesPreview />
         <KlilProfiles />
         <Authority />
         <Testimonials />
-        <ContactSection />
       </main>
       <Footer />
       <StickyMobileCTA />

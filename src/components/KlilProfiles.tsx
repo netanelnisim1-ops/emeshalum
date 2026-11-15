@@ -12,16 +12,16 @@ const KLIL_FEATURES = [
 
 const KLIL_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    alt: "פרופיל בלגי קליל - חלון מעוצב לסלון",
+    src: "/images/projects/chalon-belgi-mitbach-pinati.jpg",
+    alt: "חלונות בלגיים במטבח פינתי - עבודה של א.מ.ש אלומיניום",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
-    alt: "פרופיל קליל - חלון פנורמי",
+    src: "/images/projects/delet-hazaza-salon.jpg",
+    alt: "דלת הזזה מאלומיניום ביציאה מהסלון - עבודה של א.מ.ש אלומיניום",
   },
   {
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
-    alt: "פרופיל קליל - חלון הזזה",
+    src: "/images/projects/chalon-im-trys-glila.jpg",
+    alt: "חלון הזזה עם תריס גלילה - עבודה של א.מ.ש אלומיניום",
   },
 ];
 

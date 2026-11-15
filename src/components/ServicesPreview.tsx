@@ -6,7 +6,7 @@ const SERVICES = [
     title: "חלונות מעוצבים מכל הסוגים",
     body: "חלונות בלגיים, חלונות הזזה, חלונות פנורמיים, וחלונות פתיחה (קיפ / דריי-קיפ) – מיוצרים מהפרופילים המובילים והעמידים ביותר בשוק.",
     image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+      "/images/projects/chalon-belgi-mitbach-pinati.jpg",
     href: "/services/windows-doors",
     accent: "חלונות בלגיים, הזזה ופנורמיים",
   },
@@ -14,7 +14,7 @@ const SERVICES = [
     title: "מערכות תריסים והצללה",
     body: "תריסי אור חשמליים, תריסי שלבים ורשתות נגללות נגד יתושים – משולבים באופן הרמוני עם החלון.",
     image:
-      "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1200&q=80",
+      "/images/projects/chalon-im-trys-glila.jpg",
     href: "/services/electric-shutters",
     accent: "תריסים חשמליים ורשתות",
   },
@@ -22,7 +22,7 @@ const SERVICES = [
     title: "מעטפת אלומיניום מלאה",
     body: "דלתות אלומיניום כניסה ופנים, פרגולות, סגירות חורף למרפסות זכוכית, גדרות, שערים ומעקות. אחידות עיצובית מול ספק אחד.",
     image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80",
+      "/images/projects/sgirat-patio-zchuchit.jpg",
     href: "/services/showers-pergolas-railings",
     accent: "פרגולות, מקלחונים ומעקות",
   },

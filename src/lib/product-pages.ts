@@ -18,11 +18,13 @@ export type ProductPage = {
   faq: { q: string; a: string }[];
   guides: string[];
   related: string[];
+  photos?: string[];
 };
 
 export const PRODUCT_PAGES: ProductPage[] = [
   {
     slug: "chlvnvt-alvmynyvm",
+    photos: ["chalon-belgi-erker", "chalon-tsir-im-kvuim", "chalon-gadol-im-reshet"],
     keyword: "חלונות אלומיניום",
     seoTitle: "חלונות אלומיניום לפי מידה, ישירות מהיצרן | אחריות {W} שנים",
     description: "חלונות אלומיניום לפי מידה לבית ולעסק: הזזה, בלגי, קיפ ופנורמי. ייצור והתקנה בכל הארץ, מחיר יצרן ואחריות ל-{W} שנים.",
@@ -59,6 +61,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "chlvnvt-blgyym",
+    photos: ["chalon-belgi-mitbach-pinati", "chalon-belgi-erker-mitbach", "chalon-belgi-lavan"],
     keyword: "חלונות בלגיים",
     seoTitle: "חלונות בלגיים מאלומיניום לפי מידה | אחריות {W} שנים",
     description: "חלונות בלגיים מאלומיניום לפי מידה: ציר, הזזה וויטרינה בלגית, בכל הגוונים. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -127,6 +130,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "chlvnvt-hzzh",
+    photos: ["chalon-im-trys-glila", "chalon-vedelet-hazaza-trysim"],
     keyword: "חלונות הזזה",
     seoTitle: "חלונות הזזה מאלומיניום לפי מידה | אחריות {W} שנים",
     description: "חלונות הזזה מאלומיניום לפי מידה לסלון, לחדרי שינה ולמרפסת. כל סדרות קליל, ייצור והתקנה בכל הארץ ואחריות ל-{W} שנים.",
@@ -162,6 +166,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "chlvnvt-kyp",
+    photos: ["chalon-kip-mitbach", "chalon-amvatya-im-trys", "chalon-tsir-im-kvuim"],
     keyword: "חלונות קיפ",
     seoTitle: "חלון קיפ ודריי קיפ לאמבטיה, למקלחת ולשירותים | לפי מידה, אחריות {W} שנים",
     description: "חלון קיפ לאמבטיה, למקלחת ולשירותים, וחלון דריי קיפ לחדרי ילדים. חלונות אמבטיה מאלומיניום לפי מידה, עם התקנה ואחריות ל-{W} שנים.",
@@ -196,6 +201,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "chlvn-pnvrmy",
+    photos: ["delet-hazaza-salon"],
     keyword: "חלון פנורמי",
     seoTitle: "חלון פנורמי מאלומיניום לפי מידה | אחריות {W} שנים",
     description: "חלון פנורמי מאלומיניום לפי מידה: מינימום מסגרת, מקסימום נוף. סדרות מינימליסטיות, ייצור והתקנה בכל הארץ ואחריות ל-{W} שנים.",
@@ -263,6 +269,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "vytrynvt-alvmynyvm",
+    photos: ["delet-hazaza-salon", "chalon-vedelet-hazaza-trysim"],
     keyword: "ויטרינות אלומיניום",
     seoTitle: "ויטרינות אלומיניום לפי מידה, לבית ולעסק | אחריות {W} שנים",
     description: "ויטרינות אלומיניום לפי מידה: ויטרינת הזזה לסלון, ויטרינה בלגית וחזיתות לעסקים. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -299,6 +306,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "hchlpt-chlvnvt",
+    photos: ["chalon-belgi-erker", "chalon-gadol-im-reshet", "chalon-tsir-im-kvuim"],
     keyword: "החלפת חלונות",
     seoTitle: "החלפת חלונות לחלונות אלומיניום לפי מידה | אחריות {W} שנים",
     description: "החלפת חלונות ישנים בחלונות אלומיניום חדשים לפי מידה: פירוק, התקנה ואיטום. בכל הארץ, עם אחריות ל-{W} שנים.",
@@ -333,6 +341,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "dltvt-alvmynyvm",
+    photos: ["delet-pnim-zchuchit-mechoretzet", "delet-knisa-vechalon-belgi", "delet-pnim-zchuchit-mechoretzet-2"],
     keyword: "דלתות אלומיניום",
     seoTitle: "דלתות אלומיניום לפי מידה: כניסה, הזזה ופנים | אחריות {W} שנים",
     description: "דלתות אלומיניום לפי מידה: דלתות כניסה, דלתות הזזה, דלת בלגית ודלתות פנים. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -367,6 +376,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "dltvt-knysh-malvmynyvm",
+    photos: ["delet-knisa-vechalon-belgi"],
     keyword: "דלתות כניסה מאלומיניום",
     seoTitle: "דלתות כניסה מאלומיניום לפי מידה | אחריות {W} שנים",
     description: "דלתות כניסה מאלומיניום לפי מידה, לבית פרטי ולבניין: אטומות, עם זכוכית או בלגיות. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -401,6 +411,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "dlt-hzzh-alvmynyvm",
+    photos: ["delet-hazaza-salon", "chalon-vedelet-hazaza-trysim"],
     keyword: "דלת הזזה אלומיניום",
     seoTitle: "דלת הזזה מאלומיניום לפי מידה | אחריות {W} שנים",
     description: "דלת הזזה מאלומיניום לפי מידה ליציאה למרפסת ולגינה: בייסיק, באוהאוס, FINE ובלגי. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -469,6 +480,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "prgvlvt-alvmynyvm",
+    photos: ["chalon-vedelet-hazaza-trysim"],
     keyword: "פרגולות אלומיניום",
     seoTitle: "פרגולות אלומיניום לפי מידה, לחצר ולמרפסת | אחריות {W} שנים",
     description: "פרגולות אלומיניום לפי מידה: צמודות, עומדות, עם סנטף, רפפות או דמוי עץ. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -641,6 +653,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "sgyrt-mrpst-zkvkyt",
+    photos: ["sgirat-patio-zchuchit"],
     keyword: "סגירת מרפסת זכוכית",
     seoTitle: "סגירת מרפסת זכוכית לפי מידה: הזזה ומתקפלת | אחריות {W} שנים",
     description: "סגירת מרפסת זכוכית לפי מידה: הזזה, וילון זכוכית מתקפל וסגירה בלגית. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -740,6 +753,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "rshtvt-lchlvnvt",
+    photos: ["chalon-gadol-im-reshet"],
     keyword: "רשתות לחלונות",
     seoTitle: "רשתות לחלונות ורשת נגד יתושים לפי מידה | אחריות {W} שנים",
     description: "רשתות לחלונות לפי מידה: רשת נגד יתושים קבועה, הזזה, גלילה ורשת לחלון ממ\"ד. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -774,6 +788,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "trysy-glylh",
+    photos: ["chalon-im-trys-glila", "chalon-vedelet-hazaza-trysim", "chalon-amvatya-im-trys"],
     keyword: "תריסי גלילה",
     seoTitle: "תריסי גלילה חשמליים וידניים לפי מידה | אחריות {W} שנים",
     description: "תריסי גלילה מאלומיניום לפי מידה, חשמליים או ידניים, בשלבים מוקצפים או משוכים. ייצור והתקנה בכל הארץ עם אחריות ל-{W} שנים.",
@@ -941,6 +956,7 @@ export const PRODUCT_PAGES: ProductPage[] = [
   },
   {
     slug: "chdr-zkvkyt",
+    photos: ["sgirat-patio-zchuchit"],
     keyword: "חדר זכוכית",
     seoTitle: "חדר זכוכית וסגירת פרגולה בזכוכית לפי מידה | אחריות {W} שנים",
     description: "חדר זכוכית לחצר, לגג או למרפסת: מבנה אלומיניום וזכוכית או סגירת פרגולה קיימת בזכוכית. לפי מידה, עם התקנה ואחריות ל-{W} שנים.",
