@@ -127,7 +127,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} {BUSINESS.name}. כל הזכויות שמורות.</p>
+          <p>© {new Date().getFullYear()} {BUSINESS.name} · ח.פ {BUSINESS.businessId}. כל הזכויות שמורות.</p>
           <p>
             נבנה במחשבה על איכות. {BUSINESS.founderName}, {BUSINESS.founderRole}.
           </p>

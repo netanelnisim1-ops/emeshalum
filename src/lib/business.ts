@@ -13,6 +13,7 @@ export const BUSINESS = {
   instagram: "https://www.instagram.com/aluminium_emesh/",
   siteUrl: "https://emeshalum.co.il",
   serviceArea: "כל הארץ",
+  businessId: "301213203",
 } as const;
 
 export const NAV_LINKS = [

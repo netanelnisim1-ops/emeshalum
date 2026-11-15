@@ -105,6 +105,9 @@ const localBusinessJsonLd = {
   telephone: BUSINESS_PHONE,
   email: BUSINESS_EMAIL,
   priceRange: "$$",
+  taxID: "301213203",
+  logo: `${SITE_URL}/logo.png`,
+  image: `${SITE_URL}/og-image.jpg`,
   areaServed: {
     "@type": "Country",
     name: "ישראל",
