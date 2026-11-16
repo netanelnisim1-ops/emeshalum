@@ -159,7 +159,8 @@
     "גדר אלומיניום לבריכה",
     "חלונות אלומיניום עם נתק תרמי",
     "סוגי זכוכית למקלחון",
-    "פרגולת אלומיניום לסוכה"
+    "פרגולת אלומיניום לסוכה",
+    "מסתור כביסה מידות ותקן"
   ],
   "history": [
     {
@@ -1121,6 +1122,12 @@
       "slug": "prgvlt-alvmynyvm-lsvkh",
       "category": "use-cases",
       "publishedAt": "2026-11-12T04:27:28.903Z"
+    },
+    {
+      "keyword": "מסתור כביסה מידות ותקן",
+      "slug": "mstvr-kbysh-mydvt-vtkn",
+      "category": "guides",
+      "publishedAt": "2026-11-16T04:27:48.505Z"
     }
   ],
   "cityCursor": {
@@ -1131,6 +1138,7 @@
     "railings": 8,
     "fences": 8,
     "windows": 8,
-    "showers": 8
+    "showers": 8,
+    "laundry": 8
   }
 }
