@@ -160,7 +160,8 @@
     "חלונות אלומיניום עם נתק תרמי",
     "סוגי זכוכית למקלחון",
     "פרגולת אלומיניום לסוכה",
-    "מסתור כביסה מידות ותקן"
+    "מסתור כביסה מידות ותקן",
+    "תריס חשמלי לממ\"ד"
   ],
   "history": [
     {
@@ -1128,6 +1129,12 @@
       "slug": "mstvr-kbysh-mydvt-vtkn",
       "category": "guides",
       "publishedAt": "2026-11-16T04:27:48.505Z"
+    },
+    {
+      "keyword": "תריס חשמלי לממ\"ד",
+      "slug": "trys-chshmly-lmmd",
+      "category": "use-cases",
+      "publishedAt": "2026-11-19T04:27:30.714Z"
     }
   ],
   "cityCursor": {
@@ -1139,6 +1146,7 @@
     "fences": 8,
     "windows": 8,
     "showers": 8,
-    "laundry": 8
+    "laundry": 8,
+    "shutters": 8
   }
 }
