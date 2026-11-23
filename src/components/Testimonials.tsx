@@ -1,18 +1,19 @@
 import { Star, ExternalLink } from "lucide-react";
+import { getLiveGoogleReviews, GOOGLE_PLACE_ID } from "@/lib/google-reviews";
 
-// Real reviews from the Google Business Profile only. Copy them exactly as written on Google
-// (first name + initial is fine) and update the rating/count when new reviews come in.
-const GOOGLE_RATING = 5.0;
-const GOOGLE_REVIEW_COUNT = 8;
+// Rating, count and the latest reviews come live from Google (src/lib/google-reviews.ts).
+// The values below are only the fallback when the API key is missing or Google is unreachable.
+const FALLBACK_RATING = 5.0;
+const FALLBACK_REVIEW_COUNT = 8;
 // Official Google reviews URLs by place ID (the g.page short link opened a blank search page on mobile).
 // Direct share link of OUR Business Profile (Maps > the profile > Share). A name search lands on a list
 // that also shows the old rented-site profile and competitors, so leave empty until we have the real link.
-const GOOGLE_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJ4Ru8GGnurqYRZz68zWiGAmQ";
+const GOOGLE_REVIEWS_URL = `https://search.google.com/local/reviews?placeid=${GOOGLE_PLACE_ID}`;
 // Short "write a review" link from the Business Profile ("קבלת ביקורות נוספות"). Empty until we have it.
-const WRITE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJ4Ru8GGnurqYRZz68zWiGAmQ";
+const WRITE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
 
 type GoogleReview = { author: string; rating: number; text: string; when?: string };
-const GOOGLE_REVIEWS: GoogleReview[] = [
+const FALLBACK_REVIEWS: GoogleReview[] = [
   {
     author: "נילי ישראל",
     rating: 5,
@@ -54,7 +55,17 @@ function Stars({ count, size = "w-5 h-5" }: { count: number; size?: string }) {
   );
 }
 
-export default function Testimonials() {
+export default async function Testimonials() {
+  const live = await getLiveGoogleReviews();
+  const GOOGLE_RATING = live?.rating ?? FALLBACK_RATING;
+  const GOOGLE_REVIEW_COUNT = live?.count ?? FALLBACK_REVIEW_COUNT;
+  // Google returns up to 5 latest/most relevant reviews; keep the hand-copied ones that aren't among them.
+  const liveAuthors = new Set((live?.reviews || []).map((r) => r.author));
+  const GOOGLE_REVIEWS: GoogleReview[] = [
+    ...(live?.reviews || []),
+    ...FALLBACK_REVIEWS.filter((r) => !liveAuthors.has(r.author)),
+  ].slice(0, 9);
+
   return (
     <section className="py-14 md:py-20 bg-brand-cream">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
