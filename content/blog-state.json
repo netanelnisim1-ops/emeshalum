@@ -162,7 +162,8 @@
     "פרגולת אלומיניום לסוכה",
     "מסתור כביסה מידות ותקן",
     "תריס חשמלי לממ\"ד",
-    "רפפות אלומיניום"
+    "רפפות אלומיניום",
+    "פרגולת אלומיניום צפה"
   ],
   "history": [
     {
@@ -1142,13 +1143,19 @@
       "slug": "rppvt-alvmynyvm",
       "category": "guides",
       "publishedAt": "2026-11-23T04:27:58.789Z"
+    },
+    {
+      "keyword": "פרגולת אלומיניום צפה",
+      "slug": "prgvlt-alvmynyvm-tsph",
+      "category": "use-cases",
+      "publishedAt": "2026-11-26T04:27:22.729Z"
     }
   ],
   "cityCursor": {
     "doors": 16,
     "general": 16,
     "balcony": 8,
-    "pergolas": 16,
+    "pergolas": 24,
     "railings": 8,
     "fences": 8,
     "windows": 8,
